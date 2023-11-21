@@ -1,4 +1,4 @@
-package org.NateAra;
+package com.NateAra;
 
 public class Main {
     public static void main(String[] args) {
