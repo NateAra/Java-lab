@@ -1,0 +1,26 @@
+package com.NateAra.exercise;
+
+import java.text.NumberFormat;
+import java.util.Scanner;
+
+public class MortgageCalculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Principal: ");
+        double principal = scanner.nextDouble();
+
+        System.out.print("Annual Interest Rate: ");
+        double rate = scanner.nextDouble();
+        rate = (rate / 100) / 12;
+
+        System.out.print("Period (Years): ");
+        double period = scanner.nextDouble();
+        period *= 12;
+
+        double mortgage = principal * (rate * Math.pow(1 + rate, period)) / (Math.pow(1 + rate, period) - 1);
+        String result = NumberFormat.getCurrencyInstance().format(mortgage);
+        System.out.print("Mortgage: " + result);
+    }
+}
