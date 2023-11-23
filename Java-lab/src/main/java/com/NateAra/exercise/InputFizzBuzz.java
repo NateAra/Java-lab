@@ -13,14 +13,15 @@ public class InputFizzBuzz {
         System.out.print("Number: ");
         int number = scanner.nextInt();
 
-        if (number % DIVISIBLE_BY_THREE == 0 && number % DIVISIBLE_BY_FIVE == 0) {
-            System.out.println("FizzBuzz");
-        } else if (number % DIVISIBLE_BY_FIVE == 0) {
-            System.out.println("Fizz");
-        } else if (number % DIVISIBLE_BY_THREE == 0) {
-            System.out.println("Buzz");
-        } else {
-            System.out.println(number);
-        }
+        System.out.println(fizzBuzz(number));
+    }
+
+    private static String fizzBuzz(int number) {
+        String result = "";
+
+        result += (number % DIVISIBLE_BY_THREE == 0) ? "Fizz" : "";
+        result += (number % DIVISIBLE_BY_FIVE == 0) ? "Buzz" : "";
+
+        return result.isEmpty() ? String.valueOf(number) : result;
     }
 }
