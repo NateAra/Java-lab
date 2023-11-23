@@ -15,12 +15,12 @@ public class MortgageCalculator {
         double principal = scanner.nextDouble();
 
         System.out.print("Annual Interest Rate: ");
-        double rate = scanner.nextDouble();
-        rate = (rate / 100) / 12;
+        double annualInterestRate = scanner.nextDouble();
+        double monthlyInterestRate = annualInterestRate / MONTHS_IN_YEAR / PERCENT;
 
         System.out.print("Period (Years): ");
-        double period = scanner.nextDouble();
-        period *= 12;
+        double year = scanner.nextDouble();
+        double numberOfPayments = year * MONTHS_IN_YEAR;
 
         double mortgage = principal * (rate * Math.pow(1 + rate, period)) / (Math.pow(1 + rate, period) - 1);
         String result = NumberFormat.getCurrencyInstance().format(mortgage);
