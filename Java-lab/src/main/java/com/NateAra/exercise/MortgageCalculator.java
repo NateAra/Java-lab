@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 public class MortgageCalculator {
 
+    private static final int MONTHS_IN_YEAR = 12;
+    private static final int PERCENT = 100;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
