@@ -11,16 +11,13 @@ public class MortgageCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Principal: ");
-        double principal = scanner.nextDouble();
+        double principal = getValidatedInput(scanner, "Principal: ", 1000, 1000000, "Please enter a value between 1K - 1M");
 
-        System.out.print("Annual Interest Rate: ");
-        double annualInterestRate = scanner.nextDouble();
+        double annualInterestRate = getValidatedInput(scanner, "Annual Interest Rate: ", 1, 30, "Please enter a value between 1 - 30");
         double monthlyInterestRate = annualInterestRate / MONTHS_IN_YEAR / PERCENT;
 
-        System.out.print("Period (Years): ");
-        double year = scanner.nextDouble();
-        double numberOfPayments = year * MONTHS_IN_YEAR;
+        double years = getValidatedInput(scanner, "Period (Years): ", 1, 30, "Please enter a value between 1 - 30");
+        double numberOfPayments = years * MONTHS_IN_YEAR;
 
         double mortgage = calculateMortgage(principal, monthlyInterestRate, numberOfPayments);
         String mortgageFormat = NumberFormat.getCurrencyInstance().format(mortgage);
