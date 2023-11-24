@@ -27,6 +27,17 @@ public class MortgageCalculator {
         System.out.print("Mortgage: " + mortgageFormat);
     }
 
+    private static double getValidatedInput(Scanner scanner, String prompt, double min, double max, String errorMessage) {
+        System.out.print(prompt);
+        double input = scanner.nextDouble();
+        while (input < min || input > max) {
+            System.out.println(errorMessage);
+            System.out.print(prompt);
+            input = scanner.nextDouble();
+        }
+        return input;
+    }
+
     private static double calculateMortgage(double principal, double monthlyInterestRate, double numberOfPayments) {
         return principal * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)) / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
     }
