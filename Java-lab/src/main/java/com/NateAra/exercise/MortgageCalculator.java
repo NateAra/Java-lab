@@ -11,7 +11,7 @@ public class MortgageCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        double principal = getValidatedInput(scanner, "Principal: ", 1000, 1000000, "Please enter a value between 1K - 1M");
+        double principal = getValidatedInput(scanner, "Principal: ", 1000, 1_000_000, "Please enter a value between 1K - 1M");
 
         double annualInterestRate = getValidatedInput(scanner, "Annual Interest Rate: ", 1, 30, "Please enter a value between 1 - 30");
         double monthlyInterestRate = annualInterestRate / MONTHS_IN_YEAR / PERCENT;
