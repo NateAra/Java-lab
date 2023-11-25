@@ -26,13 +26,13 @@ public class MortgageCalculator {
 
     private static double getValidatedInput(Scanner scanner, String prompt, double min, double max, String errorMessage) {
         System.out.print(prompt);
-        double input = scanner.nextDouble();
-        while (input < min || input > max) {
+        double userInput = scanner.nextDouble();
+        while (userInput < min || userInput > max) {
             System.out.println(errorMessage);
             System.out.print(prompt);
-            input = scanner.nextDouble();
+            userInput = scanner.nextDouble();
         }
-        return input;
+        return userInput;
     }
 
     private static double calculateMortgage(double principal, double monthlyInterestRate, double numberOfPayments) {
