@@ -38,4 +38,13 @@ public class MortgageCalculator {
     private static double calculateMortgage(double principal, double monthlyInterestRate, double numberOfPayments) {
         return principal * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)) / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
     }
+
+    private static double calculateBalance(double principal, double annualInterestRate, double years, double numberOfPaymentsMade) {
+        double monthlyInterestRate = annualInterestRate / MONTHS_IN_YEAR / PERCENT;
+        double numberOfPayments = years * MONTHS_IN_YEAR;
+
+        return principal * (Math.pow(1 + monthlyInterestRate, numberOfPayments) - Math.pow(1 + monthlyInterestRate, numberOfPaymentsMade))
+                / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
+    }
+
 }
