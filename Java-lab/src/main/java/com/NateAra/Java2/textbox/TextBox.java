@@ -9,6 +9,6 @@ public class TextBox {
     }
 
     public void clear() {
-        text = "";
+        this.text = "";
     }
 }
