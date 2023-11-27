@@ -12,5 +12,8 @@ public class TextBoxMain {
         textBox2.setText("Hey Nate!");
         System.out.println(textBox2.text.toUpperCase());
 
+        textBox1.setText("This should not show up");
+        textBox1.clear();
+        System.out.println(textBox1.text);
     }
 }
