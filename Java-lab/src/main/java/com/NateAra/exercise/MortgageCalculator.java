@@ -22,10 +22,17 @@ public class MortgageCalculator {
         double mortgage = calculateMortgage(principal, monthlyInterestRate, numberOfPayments);
         String monthlyPayments = NumberFormat.getCurrencyInstance().format(mortgage);
 
+        printMortgage(monthlyPayments);
+
+        printPaymentSchedule(years, principal, annualInterestRate);
+    }
+
+    private static void printMortgage(String monthlyPayments) {
         System.out.println();
         System.out.println("Mortgage");
         System.out.println("--------");
         System.out.print("Monthly Payments: " + monthlyPayments);
+    }
 
     private static void printPaymentSchedule(double years, double principal, double annualInterestRate) {
         System.out.println();
