@@ -27,6 +27,7 @@ public class MortgageCalculator {
         System.out.println("--------");
         System.out.print("Monthly Payments: " + monthlyPayments);
 
+    private static void printPaymentSchedule(double years, double principal, double annualInterestRate) {
         System.out.println();
         System.out.println("Payment Schedule");
         System.out.println("----------------");
@@ -35,7 +36,6 @@ public class MortgageCalculator {
             double balance = calculateBalance(principal, annualInterestRate, years, month);
             System.out.println(NumberFormat.getCurrencyInstance().format(balance));
         }
-
     }
 
     private static double getValidatedInput(Scanner scanner, String prompt, double min, double max, String errorMessage) {
