@@ -20,8 +20,22 @@ public class MortgageCalculator {
         double numberOfPayments = years * MONTHS_IN_YEAR;
 
         double mortgage = calculateMortgage(principal, monthlyInterestRate, numberOfPayments);
-        String mortgageFormat = NumberFormat.getCurrencyInstance().format(mortgage);
-        System.out.print("Mortgage: " + mortgageFormat);
+        String monthlyPayments = NumberFormat.getCurrencyInstance().format(mortgage);
+
+        System.out.println();
+        System.out.println("Mortgage");
+        System.out.println("--------");
+        System.out.print("Monthly Payments: " + monthlyPayments);
+
+        System.out.println();
+        System.out.println("Payment Schedule");
+        System.out.println("----------------");
+
+        for (double month = 1; month <= years * MONTHS_IN_YEAR; month++) {
+            double balance = calculateBalance(principal, annualInterestRate, years, month);
+            System.out.println(NumberFormat.getCurrencyInstance().format(balance));
+        }
+
     }
 
     private static double getValidatedInput(Scanner scanner, String prompt, double min, double max, String errorMessage) {
