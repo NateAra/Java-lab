@@ -1,4 +1,4 @@
-package com.NateAra.exercise;
+package com.NateAra.Java1;
 
 import java.text.NumberFormat;
 import java.util.Scanner;
