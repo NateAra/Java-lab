@@ -10,6 +10,12 @@ public class EmployeeCon {
         setHourlyRate(hourlyRate);
     }
 
+    /**
+     * Calculates the wage of the employee including extra hours.
+     *
+     * @param extraHours the number of extra hours worked.
+     * @return the total wage including base salary and payment for extra hours.
+     */
     public double calculateWage(double extraHours) {
         return baseSalary + (hourlyRate * extraHours);
     }
