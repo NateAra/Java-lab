@@ -33,7 +33,7 @@ public class EmployeeCon {
     }
 
     private void setHourlyRate(double hourlyRate) {
-        if (hourlyRate <= 0) {
+        if (hourlyRate < 0) {
             throw new IllegalArgumentException("Hourly Rate has to be more than 0");
         }
         this.hourlyRate = hourlyRate;
@@ -50,5 +50,13 @@ public class EmployeeCon {
      */
     public double calculateWage() {
         return calculateWage(0);
+    }
+
+    /**
+     * Overloaded Constructor without hourlyRate.
+     *
+     */
+    public EmployeeCon(double baseSalary) {
+        this(baseSalary, 0);
     }
 }
