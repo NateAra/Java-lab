@@ -14,7 +14,7 @@ public class EmployeeCon {
         return baseSalary + (hourlyRate * extraHours);
     }
 
-    public void setBaseSalary(double baseSalary) {
+    private void setBaseSalary(double baseSalary) {
         if (baseSalary <= 0) {
             throw new IllegalArgumentException("Base Salary has to be more than 0");
         }
