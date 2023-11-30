@@ -32,14 +32,23 @@ public class EmployeeCon {
         return baseSalary;
     }
 
-    private double getHourlyRate() {
-        return hourlyRate;
-    }
-
     private void setHourlyRate(double hourlyRate) {
         if (hourlyRate <= 0) {
             throw new IllegalArgumentException("Hourly Rate has to be more than 0");
         }
         this.hourlyRate = hourlyRate;
+    }
+
+    private double getHourlyRate() {
+        return hourlyRate;
+    }
+
+    /**
+     * Overloaded method to calculate wage without extra hours.
+     *
+     * @return the base salary as the total wage.
+     */
+    public double calculateWage() {
+        return calculateWage(0);
     }
 }
