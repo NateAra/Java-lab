@@ -28,7 +28,7 @@ public class Employee {
         this.hourlyRate = hourlyRate;
     }
 
-    public double getHourlyRate() {
+    private double getHourlyRate() {
         return hourlyRate;
     }
 }
