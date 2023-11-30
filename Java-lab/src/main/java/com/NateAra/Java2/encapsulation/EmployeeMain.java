@@ -9,7 +9,6 @@ public class EmployeeMain {
         var employee = new Employee();
         employee.setBaseSalary(50_000);
         employee.setHourlyRate(20);
-        employee.getBaseSalary();
         double wage = employee.calculateWage(10);
 
         System.out.println(NumberFormat.getCurrencyInstance().format(wage));
