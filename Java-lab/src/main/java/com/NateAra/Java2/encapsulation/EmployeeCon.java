@@ -30,7 +30,7 @@ public class EmployeeCon {
         return hourlyRate;
     }
 
-    public void setHourlyRate(double hourlyRate) {
+    private void setHourlyRate(double hourlyRate) {
         if (hourlyRate <= 0) {
             throw new IllegalArgumentException("Hourly Rate has to be more than 0");
         }
