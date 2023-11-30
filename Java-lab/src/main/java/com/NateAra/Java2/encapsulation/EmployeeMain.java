@@ -16,5 +16,8 @@ public class EmployeeMain {
         var employeeCon = new EmployeeCon(50_000, 20);
         double wage2 = employeeCon.calculateWage(50);
         System.out.println(NumberFormat.getCurrencyInstance().format(wage2));
+
+        //Overloaded Constructor
+        var employee2 = new EmployeeCon(20_000);
     }
 }
