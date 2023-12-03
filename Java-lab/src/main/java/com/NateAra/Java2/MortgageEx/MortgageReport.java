@@ -5,14 +5,16 @@ import java.text.NumberFormat;
 public class MortgageReport {
 
     private final MortgageCalculator calculator;
+    private final NumberFormat currencyInstance;
 
     public MortgageReport(MortgageCalculator calculator) {
         this.calculator = calculator;
+        currencyInstance = NumberFormat.getCurrencyInstance();
     }
 
     public void printMortgage() {
         double mortgage = calculator.calculateMortgage();
-        String monthlyPayments = NumberFormat.getCurrencyInstance().format(mortgage);
+        String monthlyPayments = currencyInstance.format(mortgage);
         System.out.println();
         System.out.println("Mortgage");
         System.out.println("--------");
