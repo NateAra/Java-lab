@@ -15,15 +15,17 @@ public class MortgageCalculator {
     }
 
     public double calculateMortgage() {
-        double monthlyInterestRate = annualInterestRate / MONTHS_IN_YEAR / PERCENT;
-        double numberOfPayments = years * MONTHS_IN_YEAR;
+        double monthlyInterestRate = getMonthlyInterestRate();
+        double numberOfPayments = getNumberOfPayments();
 
         return principal * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)) / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
     }
 
+
+
     public double calculateBalance(double numberOfPaymentsMade) {
-        double monthlyInterestRate = annualInterestRate / MONTHS_IN_YEAR / PERCENT;
-        double numberOfPayments = years * MONTHS_IN_YEAR;
+        double monthlyInterestRate = getMonthlyInterestRate();
+        double numberOfPayments = getNumberOfPayments();
 
         return principal * (Math.pow(1 + monthlyInterestRate, numberOfPayments) - Math.pow(1 + monthlyInterestRate, numberOfPaymentsMade))
                 / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
@@ -31,5 +33,13 @@ public class MortgageCalculator {
 
     public double getYears() {
         return years;
+    }
+
+    private double getMonthlyInterestRate() {
+        return annualInterestRate / MONTHS_IN_YEAR / PERCENT;
+    }
+
+    private double getNumberOfPayments() {
+        return years * MONTHS_IN_YEAR;
     }
 }
