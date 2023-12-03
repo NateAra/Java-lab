@@ -31,8 +31,12 @@ public class MortgageCalculator {
                 / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
     }
 
-    public double getYears() {
-        return years;
+    public double[] getRemainingBalances() {
+        var balances = new double[(int) getNumberOfPayments()];
+        for (int month = 1; month <= balances.length; month++) {
+            balances[month - 1] = calculateBalance(month);
+        }
+        return balances;
     }
 
     private double getMonthlyInterestRate() {
