@@ -21,4 +21,9 @@ public class UITextBox extends UIControl {
     public String  toString() {
         return text;
     }
+
+    @Override
+    public void render() {
+        System.out.println("UITextBox");
+    }
 }
