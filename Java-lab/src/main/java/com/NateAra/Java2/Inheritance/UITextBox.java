@@ -9,7 +9,7 @@ public class UITextBox extends UIControl {
         this.text = text;
     }
 
-    private void setText(String text) {
+    public void setText(String text) {
         this.text = text;
     }
 
