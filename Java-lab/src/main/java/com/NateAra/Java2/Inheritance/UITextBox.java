@@ -13,7 +13,7 @@ public class UITextBox extends UIControl {
         this.text = text;
     }
 
-    private void clear() {
+    public void clear() {
         this.text = "";
     }
 
