@@ -19,4 +19,8 @@ public class UIControl {
     public void disable() {
         isEnabled = false;
     }
+
+    public void render() {
+
+    }
 }
