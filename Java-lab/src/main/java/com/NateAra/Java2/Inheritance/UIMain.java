@@ -1,11 +1,14 @@
 package com.NateAra.Java2.Inheritance;
 
+import com.NateAra.Java2.Point;
+import com.NateAra.Java2.polymorphism.CheckBox;
+
 public class UIMain {
 
     public static void main(String[] args) {
-        var control = new UITextBox();
-        control.disable();
-        control.setText("Hello World");
+        var control1 = new UITextBox();
+        control1.disable();
+        control1.setText("Hello World");
 //        System.out.println(control.isEnabled());
 
         // Comparing Objects
@@ -15,5 +18,11 @@ public class UIMain {
         System.out.println(point1.equals(point2));
         System.out.println(point1.hashCode());
         System.out.println(point2.hashCode());
+
+        // Polymorphism: Many Forms
+        UIControl[] controls = {new UITextBox(), new CheckBox()};
+        for (var control : controls) {
+            control.render();
+        }
     }
 }
