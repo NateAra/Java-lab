@@ -20,7 +20,5 @@ public abstract class UIControl {
         isEnabled = false;
     }
 
-    public void render() {
-
-    }
+    public abstract void render();
 }
