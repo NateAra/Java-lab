@@ -16,4 +16,9 @@ public class UITextBox extends UIControl {
     private void clear() {
         this.text = "";
     }
+
+    @Override
+    public String  toString() {
+        return text;
+    }
 }
