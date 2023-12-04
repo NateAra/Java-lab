@@ -1,6 +1,6 @@
 package com.NateAra.Java2.Inheritance;
 
-public class UIControl {
+public abstract class UIControl {
 
     private boolean isEnabled;
 
