@@ -1,4 +1,4 @@
-package com.NateAra.Java2.Inheritance;
+package com.NateAra.Java2;
 
 import java.util.Objects;
 
