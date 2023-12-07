@@ -1,14 +1,20 @@
 package com.NateAra.Java2.myTube;
 
 public class VideoProcessor {
+
+    private final VideoEncoder encoder;
+    private final EmailService emailService;
+    private final VideoDatabase database;
+
+    public VideoProcessor(VideoEncoder encoder, EmailService emailService, VideoDatabase database) {
+        this.encoder = encoder;
+        this.emailService = emailService;
+        this.database = database;
+    }
+
     public void process(Video video) {
-        var encoder = new VideoEncoder();
         encoder.encode(video);
-
-        var database = new VideoDatabase();
         database.store(video);
-
-        var emailService = new EmailService();
         emailService.sendEmail(video.getUser());
     }
 }
