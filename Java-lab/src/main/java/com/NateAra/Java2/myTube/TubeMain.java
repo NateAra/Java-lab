@@ -7,7 +7,7 @@ public class TubeMain {
         video.setTitle("Jennifer's birthday");
         video.setUser(new User("john@domain.com"));
 
-        var processor = new VideoProcessor();
+        var processor = new VideoProcessor(new XVideoEncoder(), new XEmailService(), new XVideoDatabase());
         processor.process(video);
     }
 }
