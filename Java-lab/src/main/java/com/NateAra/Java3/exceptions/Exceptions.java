@@ -2,6 +2,9 @@ package com.NateAra.Java3.exceptions;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 public class Exceptions {
     public void show() {
@@ -14,4 +17,27 @@ public class Exceptions {
         }
     }
 
+    public void showMultiple() {
+        try {
+            var reader = new FileReader("file.txt");
+            var value = reader.read();
+        } catch (FileNotFoundException ex) {
+            System.out.println("File does not exist.");
+            System.out.println(ex.getMessage());
+        } catch (IOException ex) {
+            System.out.println("IOException");
+            ex.getMessage();
+        }
+    }
+
+    public void showMultipleDifferent() {
+        try {
+            var reader = new FileReader("file.txt");
+            var value = reader.read();
+            new SimpleDateFormat().parse("");
+        } catch (IOException | ParseException ex) {
+            System.out.println("IOException");
+            ex.getMessage();
+        }
+    }
 }
