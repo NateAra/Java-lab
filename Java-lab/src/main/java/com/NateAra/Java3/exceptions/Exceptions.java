@@ -18,8 +18,11 @@ public class Exceptions {
     }
 
     public void showMultiple() {
+        // Added finally for closing the reader
+        FileReader reader = null;
+
         try {
-            var reader = new FileReader("file.txt");
+            reader = new FileReader("file.txt");
             var value = reader.read();
         } catch (FileNotFoundException ex) {
             System.out.println("File does not exist.");
@@ -27,6 +30,14 @@ public class Exceptions {
         } catch (IOException ex) {
             System.out.println("IOException");
             ex.getMessage();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.getMessage();
+                }
+            }
         }
     }
 
