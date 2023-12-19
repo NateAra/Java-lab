@@ -2,6 +2,7 @@ package com.NateAra.Java3.exceptions;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -49,6 +50,18 @@ public class Exceptions {
         } catch (IOException | ParseException ex) {
             System.out.println("IOException");
             ex.getMessage();
+        }
+    }
+
+    // Try with resources statement
+    public void show2() {
+        try (
+                var reader = new FileReader("file.txt");
+                var writer = new FileWriter("...");
+        ) {
+            var value = reader.read();
+        } catch (IOException ex) {
+            System.out.println("Could not read data.");
         }
     }
 }
