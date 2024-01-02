@@ -3,6 +3,8 @@ package com.NateAra.Java3.exceptions;
 
 import java.io.IOException;
 
+//TODO have to revise the code
+
 public class ExceptionsMain {
 
     public static void main(String[] args) {
@@ -20,6 +22,14 @@ public class ExceptionsMain {
             account.deposit2(-1);
         } catch (IOException e) {
             System.out.println("Logging");
+        }
+
+        // Trying the custom exception
+
+        try {
+            account.withdraw(10);
+        } catch (InsufficientFundsException e) {
+            System.out.println(e.getMessage());
         }
 
     }
