@@ -13,7 +13,15 @@ public class Array {
     }
 
     public void insert(int item) {
-        array[count++] = item;
+        if (count == items.length) {
+            int[] newArr = new int[count * 2];
+
+            for (int i = 0; i < count; i++) {
+                newArr[i] = items[i];
+            }
+            items = newArr;
+        }
+        items[count++] = item;
     }
 
     public void print() {
