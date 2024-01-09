@@ -25,6 +25,8 @@ public class Array {
     }
 
     public void print() {
-        System.out.println(Arrays.toString(array));
+        for (int i = 0; i < count; i++) {
+            System.out.print(items[i] + " ");
+        }
     }
 }
