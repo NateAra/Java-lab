@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 public class Array {
 
-    private final int[] array;
+    private int[] items;
     private int count;
 
     public Array(int length) {
-        this.array = new int[length];
+        this.items = new int[length];
         this.count = 0;
     }
 
