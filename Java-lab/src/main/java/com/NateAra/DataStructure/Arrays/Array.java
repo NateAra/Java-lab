@@ -14,12 +14,12 @@ public class Array {
 
     public void insert(int item) {
         if (count == items.length) {
-            int[] newArr = new int[count * 2];
+            int[] newItems = new int[count * 2];
 
             for (int i = 0; i < count; i++) {
-                newArr[i] = items[i];
+                newItems[i] = items[i];
             }
-            items = newArr;
+            items = newItems;
         }
         items[count++] = item;
     }
