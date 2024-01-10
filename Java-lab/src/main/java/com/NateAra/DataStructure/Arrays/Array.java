@@ -14,9 +14,7 @@ public class Array {
         if (count == items.length) {
             int[] newItems = new int[count * 2];
 
-            for (int i = 0; i < count; i++) {
-                newItems[i] = items[i];
-            }
+            System.arraycopy(items, 0, newItems, 0, count);
             items = newItems;
         }
         items[count++] = item;
