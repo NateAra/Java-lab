@@ -1,7 +1,5 @@
 package com.NateAra.DataStructure.Arrays;
 
-import java.util.Arrays;
-
 public class Array {
 
     private int[] items;
@@ -33,6 +31,15 @@ public class Array {
             items[i] = items[i + 1];
         }
         count--;
+    }
+
+    public int indexOf(int item) {
+        for (int i = 0; i < count; i++) {
+            if (items[i] == item) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     public void print() {
