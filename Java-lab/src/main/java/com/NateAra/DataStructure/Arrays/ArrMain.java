@@ -9,6 +9,7 @@ public class ArrMain {
         number.insert(3);
         number.insert(4);
         number.removeAt(0);
+        System.out.println(number.indexOf(300));
         number.print();
     }
 }
