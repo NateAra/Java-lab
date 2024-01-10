@@ -44,7 +44,7 @@ public class Array {
 
     public void print() {
         for (int i = 0; i < count; i++) {
-            System.out.print(items[i] + " ");
+            System.out.println(items[i]);
         }
     }
 
