@@ -15,5 +15,8 @@ public class ArrMain {
         System.out.println(number.indexOf(300));
 
         number.print();
+
+        System.out.println("--------------");
+        number.largestItem();
     }
 }
