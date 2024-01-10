@@ -48,6 +48,10 @@ public class Array {
         }
     }
 
+    public int[] getItems() {
+        return Arrays.copyOf(items, count);
+    }
+
     public void largestItem() {
         int max = Arrays.stream(items).max().getAsInt();
         System.out.println(max);
