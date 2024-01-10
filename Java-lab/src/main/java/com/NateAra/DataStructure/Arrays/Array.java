@@ -1,6 +1,8 @@
 package com.NateAra.DataStructure.Arrays;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Array {
 
@@ -55,5 +57,21 @@ public class Array {
     public void largestItem() {
         int max = Arrays.stream(items).max().getAsInt();
         System.out.println(max);
+    }
+
+    public void findCommonItems(int[] arr1, int[] arr2) {
+        Set<Integer> set1 = new HashSet<>();
+        Set<Integer> set2 = new HashSet<>();
+
+        for (int i : arr1) {
+            set1.add(i);
+        }
+
+        for (int i : arr2) {
+            set2.add(i);
+        }
+
+        set1.retainAll(set2);
+        System.out.println(set1);
     }
 }
