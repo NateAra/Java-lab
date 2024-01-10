@@ -1,5 +1,7 @@
 package com.NateAra.DataStructure.Arrays;
 
+import java.util.Arrays;
+
 public class Array {
 
     private int[] items;
@@ -44,5 +46,10 @@ public class Array {
         for (int i = 0; i < count; i++) {
             System.out.print(items[i] + " ");
         }
+    }
+
+    public void largestItem() {
+        int max = Arrays.stream(items).max().getAsInt();
+        System.out.println(max);
     }
 }
