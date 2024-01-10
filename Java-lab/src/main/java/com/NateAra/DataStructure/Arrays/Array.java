@@ -24,6 +24,17 @@ public class Array {
         items[count++] = item;
     }
 
+    public void removeAt(int index) {
+        if (index < 0 || index >= count) {
+            throw new IllegalArgumentException("Out of bound!!");
+        }
+
+        for (int i = index; i < count - 1; i++) {
+            items[i] = items[i + 1];
+        }
+        count--;
+    }
+
     public void print() {
         for (int i = 0; i < count; i++) {
             System.out.print(items[i] + " ");
