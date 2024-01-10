@@ -16,9 +16,15 @@ public class ArrMain {
 
         number1.largestItem();
 
-        number.print();
+        //--------------
 
-        System.out.println("--------------");
-        number.largestItem();
+        Array number2 = new Array(3);
+        number2.insert(7);
+        number2.insert(6);
+        number2.insert(5);
+        number2.insert(4);
+        number2.insert(3);
+
+        number2.findCommonItems(number1.getItems(), number2.getItems());
     }
 }
