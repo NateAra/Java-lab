@@ -14,5 +14,6 @@ public class DynamicArr {
         System.out.println(list.lastIndexOf(30));
         System.out.println(list.contains(20));
         System.out.println(list);
+        System.out.println(list.size());
     }
 }
