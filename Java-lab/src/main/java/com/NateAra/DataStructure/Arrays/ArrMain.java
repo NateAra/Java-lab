@@ -17,11 +17,11 @@ public class ArrMain {
 
 
         Array number2 = new Array(3);
-        number2.insert(7);
-        number2.insert(6);
-        number2.insert(5);
-        number2.insert(4);
-        number2.insert(3);
+        number2.insert(70);
+        number2.insert(60);
+        number2.insert(50);
+        number2.insert(40);
+        number2.insert(30);
 
         number2.findCommonItems(number1.getItems(), number2.getItems());
     }
