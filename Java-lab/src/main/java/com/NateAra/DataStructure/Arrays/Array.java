@@ -74,4 +74,15 @@ public class Array {
         set1.retainAll(set2);
         System.out.println(set1);
     }
+
+    public void reverse(int[] items) {
+        int[] newArr = new int[items.length];
+        int index = 0;
+
+        for (int i = items.length - 1; i >= 0 ; i--) {
+            newArr[index] = items[i];
+            index++;
+        }
+        System.out.println(Arrays.toString(newArr));
+    }
 }
