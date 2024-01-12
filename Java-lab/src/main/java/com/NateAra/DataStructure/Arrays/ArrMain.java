@@ -12,12 +12,9 @@ public class ArrMain {
 
 
         number1.removeAt(0);
-
         System.out.println(number1.indexOf(300));
-
         number1.largestItem();
 
-        //--------------
 
         Array number2 = new Array(3);
         number2.insert(7);
