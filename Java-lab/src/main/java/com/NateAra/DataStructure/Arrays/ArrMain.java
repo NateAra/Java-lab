@@ -14,6 +14,7 @@ public class ArrMain {
         number1.removeAt(0);
         System.out.println(number1.indexOf(300));
         number1.largestItem();
+        number1.reverse(number1.getItems());
 
 
         Array number2 = new Array(3);
