@@ -24,6 +24,9 @@ public class ArrMain {
         number2.insert(40);
         number2.insert(30);
 
-        number2.findCommonItems(number1.getItems(), number2.getItems());
+//        number2.findCommonItems(number1.getItems(), number2.getItems());
+
+        number2.insertAt(10, 2);
+        number2.print();
     }
 }
