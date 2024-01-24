@@ -85,4 +85,24 @@ public class Array {
         }
         System.out.println(Arrays.toString(newArr));
     }
+
+    public void insertAt(int item, int index) {
+//        if (index < 0 || index >= count) {
+//            throw new IllegalArgumentException("Out of bound!!");
+//        }
+//
+//        if (count == items.length) {
+//            int[] newItems = new int[count * 2];
+//
+//            System.arraycopy(items, 0, newItems, 0, count);
+//            items = newItems;
+//        }
+//
+//        for (int i = count - 1; i >= index; i--) {
+//            items[i + 1] = items[i];
+//        }
+
+        items[index] = item;
+//        count++;
+    }
 }
