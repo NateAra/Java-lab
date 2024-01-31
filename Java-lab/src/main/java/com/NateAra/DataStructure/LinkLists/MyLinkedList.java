@@ -16,11 +16,22 @@ public class MyLinkedList {
         Node newNode = new Node(value);
 
         if (first == null) {
-            first = newNode;
             last = newNode;
         } else {
             newNode.setNext(first);
             first = newNode;
+        }
+    }
+
+    public void addLast(int value) {
+        Node newNode = new Node(value);
+
+
+        if (last == null) {
+            first = newNode;
+        } else {
+            newNode.setNext(last);
+            last = newNode;  // Updating the last reference to the new node
         }
     }
 
