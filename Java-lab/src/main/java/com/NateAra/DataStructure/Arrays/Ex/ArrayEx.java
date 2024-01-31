@@ -15,4 +15,9 @@ package com.NateAra.DataStructure.Arrays.Ex;
 public class ArrayEx {
     private int[] items;
     private int count;
+
+    public ArrayEx(int length) {
+        this.items = new int[length];
+        this.count = 0;
+    }
 }
