@@ -12,6 +12,8 @@ package com.NateAra.DataStructure.Arrays.Ex;
 * insertAt
 * */
 
+import java.util.Arrays;
+
 public class ArrayEx {
     private int[] items;
     private int count;
@@ -32,8 +34,7 @@ public class ArrayEx {
     }
 
     public void printItems() {
-        for (int i = 0; i < count; i++) {
-            System.out.println(items[i]);
-        }
+        int[] actualItems = Arrays.copyOf(items, count);
+        System.out.println(Arrays.toString(actualItems));
     }
 }
