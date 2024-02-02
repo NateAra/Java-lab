@@ -30,4 +30,10 @@ public class ArrayEx {
         }
         items[count++] = item;
     }
+
+    public void printItems() {
+        for (int i = 0; i < count; i++) {
+            System.out.println(items[i]);
+        }
+    }
 }
