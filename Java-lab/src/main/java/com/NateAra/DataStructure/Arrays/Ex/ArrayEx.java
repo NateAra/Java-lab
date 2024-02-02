@@ -23,10 +23,10 @@ public class ArrayEx {
 
     public void insert(int item) {
         if (count == items.length) {
-            int[] newitem = new int[count * 2];
+            int[] newItems = new int[count * 2];
 
-            System.arraycopy(items, 0, newitem, 0, count);
-            items = newitem;
+            System.arraycopy(items, 0, newItems, 0, count);
+            items = newItems;
         }
         items[count++] = item;
     }
