@@ -2,10 +2,10 @@ package com.NateAra.DataStructure.Arrays.Ex;
 
 /* ToDo
 * insert
+* print
 * removeAt
 * indexOf
 * getItem
-* print
 * largestItem
 * findCommonItems
 * reverse
