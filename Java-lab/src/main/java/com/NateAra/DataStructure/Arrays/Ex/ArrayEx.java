@@ -40,6 +40,10 @@ public class ArrayEx {
 
     public void removeAt(int index) {
 
+        if (index < 0 || index >=  count) {
+            throw new IllegalArgumentException("Out of bound");
+        }
+
         for (int i = index; i < count - 1; i++) {
             items[i] = items[i + 1];
         }
