@@ -5,6 +5,12 @@ public class ArrayExMain {
         ArrayEx num = new ArrayEx(5);
         num.insert(0);
         num.insert(9);
+        num.insert(5);
+
+        num.removeAt(0);
+
         num.printItems();
+
+
     }
 }
