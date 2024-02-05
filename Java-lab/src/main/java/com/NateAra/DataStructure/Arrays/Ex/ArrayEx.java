@@ -37,4 +37,12 @@ public class ArrayEx {
         int[] actualItems = Arrays.copyOf(items, count);
         System.out.println(Arrays.toString(actualItems));
     }
+
+    public void removeAt(int index) {
+
+        for (int i = index; i < count - 1; i++) {
+            items[i] = items[i + 1];
+        }
+        count--;
+    }
 }
