@@ -72,4 +72,10 @@ public class ArrayEx {
         }
         System.out.println(lagest);
     }
+
+    public void largestItemUsingStream() {
+        int largestNum = Arrays.stream(items).max().getAsInt();
+        System.out.println(largestNum);
+    }
+
 }
