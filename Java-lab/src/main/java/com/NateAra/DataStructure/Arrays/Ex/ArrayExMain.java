@@ -10,7 +10,7 @@ public class ArrayExMain {
         num.removeAt(0);
 
         num.printItems();
-
+        System.out.println(num.indexOf(2));
 
     }
 }
