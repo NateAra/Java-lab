@@ -78,4 +78,14 @@ public class ArrayEx {
         System.out.println(largestNum);
     }
 
+    public void reverseItems(int[] items) {
+        int[] newArray = new int[items.length];
+        int index = 0;
+
+        for (int i = items.length - 1; i >= 0; i--) {
+            newArray[index] = items[i];
+            index++;
+        }
+        System.out.println(Arrays.toString(newArray));
+    }
 }
