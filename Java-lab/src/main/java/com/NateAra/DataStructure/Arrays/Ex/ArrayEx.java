@@ -58,4 +58,18 @@ public class ArrayEx {
         }
         return -1;
     }
+
+    public void largestItem() {
+        if (count == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+
+        int lagest = items[0];
+        for (int i = 1; i < count; i++){
+            if (items[i] > lagest) {
+                lagest = items[i];
+            }
+        }
+        System.out.println(lagest);
+    }
 }
