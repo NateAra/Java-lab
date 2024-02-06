@@ -8,11 +8,5 @@ public class ArrayExMain {
         num.insert(5);
         num.insert(25);
 
-        num.removeAt(0);
-
-        num.printItems();
-        System.out.println(num.indexOf(2));
-
-        num.largestItemUsingStream();
     }
 }
