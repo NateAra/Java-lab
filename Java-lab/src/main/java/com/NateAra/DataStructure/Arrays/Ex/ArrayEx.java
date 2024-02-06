@@ -88,4 +88,8 @@ public class ArrayEx {
         }
         System.out.println(Arrays.toString(newArray));
     }
+
+    public int[] getItems() {
+        return Arrays.copyOf(items, count);
+    }
 }
