@@ -92,4 +92,8 @@ public class ArrayEx {
     public int[] getItems() {
         return Arrays.copyOf(items, count);
     }
+
+    public void insertAt(int item, int index) {
+        items[index] = item;
+    }
 }
