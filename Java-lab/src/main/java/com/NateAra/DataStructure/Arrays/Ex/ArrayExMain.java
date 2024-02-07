@@ -8,5 +8,7 @@ public class ArrayExMain {
         num.insert(5);
         num.insert(25);
 
+        num.insertAt(3, 2);
+        num.printItems();
     }
 }
