@@ -5,12 +5,12 @@ public class Main {
 
 
 
-        System.out.println();
+        System.out.println(remove("Nate"));
 
     }
 
-    public static String rps(String p1, String p2) {
-        return p1.equals(p2) ? "Draw!" : "Player " + ((("rockscissors scissorspaper paperrock").contains(p1 + p2)) ? 1 : 2) + " won!";
+    public static String remove(String str) {
+        return str.substring(1, str.length() - 1);
     }
 
 }
