@@ -1,5 +1,7 @@
 package com.NateAra;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -9,8 +11,8 @@ public class Main {
 
     }
 
-    public static String remove(String str) {
-        return str.substring(1, str.length() - 1);
+    public int countSheeps(Boolean[] arrayOfSheeps) {
+        return Arrays.stream(arrayOfSheeps).filter(x -> x != null).filter(x -> x).toArray().length;
     }
 
 }
