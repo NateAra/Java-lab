@@ -10,7 +10,16 @@ public class Main {
 
     }
 
-    public static String disemvowel(String str) {
-        return str.replaceAll("(?i)[aeiou]", "");
+    public int squareDigits(int n) {
+        String sNum = String.valueOf(n);
+        StringBuilder result = new StringBuilder();
+
+        sNum.chars()
+                .map(Character::getNumericValue)
+                .map(x -> x * x)
+                .forEach(result::append);
+
+        return Integer.parseInt(result.toString());
     }
+
 }
