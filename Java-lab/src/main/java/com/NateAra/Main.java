@@ -9,15 +9,8 @@ public class Main {
 
     }
 
-    public static Integer basicMath(String op, int v1, int v2)
-    {
-        return switch (op) {
-            case "+" -> v1 + v2;
-            case "-" -> v1 - v2;
-            case "*" -> v1 * v2;
-            case "/" -> v1 / v2;
-            default -> 0;
-        };
+    public static String rps(String p1, String p2) {
+        return p1.equals(p2) ? "Draw!" : "Player " + ((("rockscissors scissorspaper paperrock").contains(p1 + p2)) ? 1 : 2) + " won!";
     }
 
 }
