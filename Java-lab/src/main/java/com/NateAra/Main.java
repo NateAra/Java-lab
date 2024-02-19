@@ -6,20 +6,19 @@ import java.util.Collections;
 public class Main {
     public static void main(String[] args) {
 
-
+        System.out.println();
 
     }
 
-    public int squareDigits(int n) {
-        String sNum = String.valueOf(n);
-        StringBuilder result = new StringBuilder();
-
-        sNum.chars()
-                .map(Character::getNumericValue)
-                .map(x -> x * x)
-                .forEach(result::append);
-
-        return Integer.parseInt(result.toString());
+    public int[] twoSum(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int u = i + 1; u < nums.length; u++) {
+                if (nums[i] + nums[u] == target) {
+                    return new int[] {i, u};
+                }
+            }
+        }
+        return null;
     }
 
 }
