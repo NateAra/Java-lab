@@ -10,19 +10,18 @@ public class Main {
 
     }
 
-    public int[] twoSum(int[] nums, int target) {
-        Map<Integer, Integer> numMap = new HashMap<>();
+    public void moveZeroes(int[] nums) {
+        int place = 0;
 
-        for (int i = 0; i < nums.length; i++) {
-            int com = target - nums[i];
-
-            if (numMap.containsKey(com)) {
-                return new int[] {numMap.get(com), i};
+        for (int num : nums) {
+            if (num != 0) {
+                nums[place++] = num;
             }
-
-            numMap.put(nums[i], i);
         }
-        return null;
+
+        while (place < nums.length) {
+            nums[place++] = 0;
+        }
     }
 
 }
