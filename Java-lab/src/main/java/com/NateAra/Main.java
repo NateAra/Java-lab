@@ -1,26 +1,31 @@
 package com.NateAra;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
 
         int[] items = {1, 2, 3, 4, 5};
 
-        System.out.println(search(items, 3));
+        System.out.println(searchInsert(items, 3));
 
     }
 
-    public static int search(int[] nums, int target) {
+    public static int searchInsert(int[] nums, int target) {
 
-        int index = Arrays.binarySearch(nums, target);
+        int left = 0;
+        int right = nums.length - 1;
 
-        if (index >= 0) {
-            return index;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
         }
-
         return -1;
     }
 
