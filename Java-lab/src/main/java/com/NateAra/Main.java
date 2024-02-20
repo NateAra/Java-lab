@@ -7,18 +7,20 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
 
-        int[] items = {5, 3, 2, 1, 4};
+        int[] items = {1, 2, 3, 4, 5};
 
         System.out.println(search(items, 3));
 
     }
 
     public static int search(int[] nums, int target) {
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == target) {
-                return i;
-            }
+
+        int index = Arrays.binarySearch(nums, target);
+
+        if (index >= 0) {
+            return index;
         }
+
         return -1;
     }
 
