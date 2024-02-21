@@ -1,28 +1,26 @@
 package com.NateAra;
 
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
-        String[] items = {"flower","flow","flight"};
+        int[] items = {3,0,1};
 
-        System.out.println(longestCommonPrefix(items));
+        System.out.println(missingNumber(items));
 
     }
 
-    public static String longestCommonPrefix(String[] strs) {
-        String prefix = strs[0];
+    public static int missingNumber(int[] nums) {
+        Arrays.sort(nums);
 
-        for (int i = 1; i < strs.length; i++) {
-            while (strs[i].indexOf(prefix) != 0) {
-                prefix = prefix.substring(0, prefix.length() - 1);
-            }
-
-            if (prefix.isEmpty()) {
-                return "";
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != i) {
+                return i;
             }
         }
-        return prefix;
+        return nums.length;
     }
 
 }
