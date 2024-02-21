@@ -8,19 +8,20 @@ public class Main {
 
         int[] items = {3,0,1};
 
-        System.out.println(missingNumber(items));
+        System.out.println();
 
     }
 
-    public static int missingNumber(int[] nums) {
-        Arrays.sort(nums);
+    public ListNode reverseList(ListNode head) {
+        ListNode prev = null;
 
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] != i) {
-                return i;
-            }
+        while (head != null) {
+            ListNode nextTemp = head.next;
+            head.next = prev;
+            prev = head;
+            head = nextTemp;
         }
-        return nums.length;
+        return prev;
     }
 
 }
