@@ -4,16 +4,16 @@ package com.NateAra;
 public class Main {
     public static void main(String[] args) {
 
-        int[] items = {1, 2, 3, 4, 5};
+        String[] items = {"flower","flow","flight"};
 
-        System.out.println();
+        System.out.println(longestCommonPrefix(items));
 
     }
 
-    public String longestCommonPrefix(String[] strs) {
+    public static String longestCommonPrefix(String[] strs) {
         String prefix = strs[0];
 
-        for (int i = 0; i < strs.length; i++) {
+        for (int i = 1; i < strs.length; i++) {
             while (strs[i].indexOf(prefix) != 0) {
                 prefix = prefix.substring(0, prefix.length() - 1);
             }
