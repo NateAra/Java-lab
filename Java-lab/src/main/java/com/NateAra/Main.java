@@ -11,17 +11,18 @@ public class Main {
 
     }
 
-    public static int[] twoSum(int[] nums, int target) {
-        Map<Integer, Integer> numMap = new HashMap<>();
+    public String longestCommonPrefix(String[] strs) {
+        String prefix = strs[0];
 
-        for (int i = 0; i < nums.length; i++) {
-            int com = target - nums[i];
-            if (numMap.containsKey(com)) {
-                return new int[] {numMap.get(com), i};
+        for (int i = 1; i < strs.length; i++) {
+            while (strs[i].indexOf(prefix) != 0) {
+                prefix = prefix.substring(0, prefix.length() - 1);
             }
-            numMap.put(nums[i], i);
+            if (prefix.isEmpty()) {
+                return "";
+            }
         }
-        return null;
+        return prefix;
     }
 
 }
