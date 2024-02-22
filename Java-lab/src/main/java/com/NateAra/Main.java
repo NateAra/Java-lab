@@ -1,27 +1,27 @@
 package com.NateAra;
 
 
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-
-        int[] items = {3,0,1};
 
         System.out.println();
 
     }
 
-    public ListNode reverseList(ListNode head) {
-        ListNode prev = null;
+    public static int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> numMap = new HashMap<>();
 
-        while (head != null) {
-            ListNode nextTemp = head.next;
-            head.next = prev;
-            prev = head;
-            head = nextTemp;
+        for (int i = 0; i < nums.length; i++) {
+            int com = target - nums[i];
+            if (numMap.containsKey(com)) {
+                return new int[] {numMap.get(com), i};
+            }
+            numMap.put(nums[i], i);
         }
-        return prev;
+        return null;
     }
 
 }
