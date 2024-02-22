@@ -1,28 +1,33 @@
 package com.NateAra;
 
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println();
+        int[] items = {1, 2, 3, 4, 6};
+
+        System.out.println(searchInsert(items, 5));
 
     }
 
-    public String longestCommonPrefix(String[] strs) {
-        String prefix = strs[0];
+    public static int searchInsert(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
 
-        for (int i = 1; i < strs.length; i++) {
-            while (strs[i].indexOf(prefix) != 0) {
-                prefix = prefix.substring(0, prefix.length() - 1);
-            }
-            if (prefix.isEmpty()) {
-                return "";
+        while (left <= right) {
+            int mid = (left + right) / 2;
+
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
             }
         }
-        return prefix;
+        return left;
     }
 
 }
