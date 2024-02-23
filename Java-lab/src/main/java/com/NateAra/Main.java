@@ -8,7 +8,7 @@ public class Main {
 
         int[] items = {1, 2, 3, 4};
 
-        System.out.println(isLove(2, 4));
+        System.out.println();
 
     }
 
