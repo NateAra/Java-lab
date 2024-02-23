@@ -11,13 +11,14 @@ public class Main {
 
         int[] items = {1, 2, 3, 4};
 
-        System.out.println();
+        System.out.println(isLove(2, 4));
 
     }
 
-    public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
-
-        return (int) Arrays.stream(classPoints).average().orElse(0) > yourPoints;
+    public static boolean isLove(final int flower1, final int flower2) {
+        boolean isEven = flower1 % 2 == 0;
+        boolean isOdd = flower2 % 2 ==0;
+        return isEven != isOdd;
     }
 
 }
