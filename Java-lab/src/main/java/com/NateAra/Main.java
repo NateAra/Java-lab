@@ -4,6 +4,7 @@ package com.NateAra;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.OptionalDouble;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,18 +15,9 @@ public class Main {
 
     }
 
-    public int[] twoSum(int[] nums, int target) {
-        Map<Integer, Integer> numMap = new HashMap<>();
+    public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
 
-        for (int i = 0; i < nums.length; i++) {
-            int numTemp = target - nums[i];
-
-            if (numMap.containsKey(numTemp)) {
-                return new int[] {numMap.get(numTemp), i};
-            }
-            numMap.put(nums[i], i);
-        }
-        return null;
+        return (int) Arrays.stream(classPoints).average().orElse(0) > yourPoints;
     }
 
 }
