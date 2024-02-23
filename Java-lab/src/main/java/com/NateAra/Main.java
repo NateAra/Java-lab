@@ -2,32 +2,30 @@ package com.NateAra;
 
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
 
-        int[] items = {1, 2, 3, 4, 6};
+        int[] items = {1, 2, 3, 4};
 
-        System.out.println(searchInsert(items, 5));
+        System.out.println();
 
     }
 
-    public static int searchInsert(int[] nums, int target) {
-        int left = 0;
-        int right = nums.length - 1;
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> numMap = new HashMap<>();
 
-        while (left <= right) {
-            int mid = (left + right) / 2;
+        for (int i = 0; i < nums.length; i++) {
+            int numTemp = target - nums[i];
 
-            if (nums[mid] == target) {
-                return mid;
-            } else if (nums[mid] < target) {
-                left = mid + 1;
-            } else {
-                right = mid - 1;
+            if (numMap.containsKey(numTemp)) {
+                return new int[] {numMap.get(numTemp), i};
             }
+            numMap.put(nums[i], i);
         }
-        return left;
+        return null;
     }
 
 }
