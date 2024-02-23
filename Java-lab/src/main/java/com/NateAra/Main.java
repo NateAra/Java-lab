@@ -9,7 +9,7 @@ public class Main {
     }
 
     public static String remove(String str) {
-        return str.substring(1, str.length() - 1);
+        return new StringBuilder(str).deleteCharAt(str.length() - 1).deleteCharAt(0).toString();
     }
 
 }
