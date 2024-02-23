@@ -4,12 +4,13 @@ package com.NateAra;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println(remove("Nate"));
+        System.out.println(solution("Nate"));
 
     }
 
-    public static String remove(String str) {
-        return new StringBuilder(str).deleteCharAt(str.length() - 1).deleteCharAt(0).toString();
+    public static String solution(String str) {
+        // Your code here...
+        return new StringBuilder(str).reverse().toString();
     }
 
 }
