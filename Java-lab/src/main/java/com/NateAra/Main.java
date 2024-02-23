@@ -4,12 +4,12 @@ package com.NateAra;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println(simpleMultiplication(2));
+        System.out.println(remove("Nate"));
 
     }
 
-    public static int simpleMultiplication(int n) {
-        return n % 2 == 0 ? n * 8 : n * 9;
+    public static String remove(String str) {
+        return str.substring(1, str.length() - 1);
     }
 
 }
