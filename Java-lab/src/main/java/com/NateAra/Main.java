@@ -12,10 +12,15 @@ public class Main {
 
     }
 
-    public static boolean isLove(final int flower1, final int flower2) {
-        boolean isEven = flower1 % 2 == 0;
-        boolean isOdd = flower2 % 2 ==0;
-        return isEven != isOdd;
+    public static Integer basicMath(String op, int v1, int v2)
+    {
+        return switch (op) {
+            case "+" -> v1 + v2;
+            case "-" -> v1 - v2;
+            case "*" -> v1 * v2;
+            case "/" -> v1 / v2;
+            default -> null;
+        };
     }
 
 }
