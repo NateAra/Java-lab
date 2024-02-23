@@ -1,10 +1,7 @@
 package com.NateAra;
 
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.OptionalDouble;
+
 
 public class Main {
     public static void main(String[] args) {
