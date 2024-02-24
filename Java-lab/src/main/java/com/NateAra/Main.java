@@ -1,33 +1,21 @@
 package com.NateAra;
 
 
+import java.util.Arrays;
 import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
 
-        Boolean[] array1 = {true,  true,  true,  false,
-                true,  true,  true,  true ,
-                true,  false, true,  false,
-                true,  false, false, true ,
-                true,  true,  true,  true ,
-                false, false, true,  true };
+        int[] array1 = {2, 5, 2, 3, 3};
 
 
-        System.out.println();
+        System.out.println(find_average(array1));
 
     }
 
-    public int countSheeps(Boolean[] arrayOfSheeps) {
-        int count = 0;
-
-        for (int i = 0; i < arrayOfSheeps.length; i++) {
-            if (arrayOfSheeps[i]) {
-                count++;
-            }
-        }
-
-        return count;
+    public static double find_average(int[] array){
+        return Arrays.stream(array).average().orElse(0);
     }
 
 }
