@@ -10,12 +10,13 @@ public class Main {
         int[] array1 = {2, 5, 2, 3, 3};
 
 
-        System.out.println(checkForFactor(2, 3));
+        System.out.println();
 
     }
 
-    public static boolean checkForFactor(int base, int factor) {
-        return base % factor == 0;
+    public static String findNeedle(Object[] haystack) {
+        // Your code here
+        return "";
     }
 
 }
