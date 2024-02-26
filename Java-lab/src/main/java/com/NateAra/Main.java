@@ -10,13 +10,18 @@ public class Main {
         Object[] array1 = {"hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"};
 
 
-        System.out.println(findNeedle(array1));
+        System.out.println();
 
     }
 
-    public static String findNeedle(Object[] haystack) {
-        // Your code here
-        return "found the needle at position " + Arrays.asList(haystack).indexOf("needle");
+    public static int getCount(String str) {
+        int count = 0;
+
+        for (char i : str.toCharArray()) {
+            count += i == 'a' || i == 'e' || i == 'i' || i == 'o' || i == 'u' ? 1 : 0;
+        }
+
+        return count;
     }
 
 }
