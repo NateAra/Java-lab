@@ -10,13 +10,7 @@ public class Main {
     }
 
     public static int getCount(String str) {
-        int count = 0;
-
-        for (char i : str.toCharArray()) {
-            count += 'a' == i || 'e' == i ||'i' == i ||'o' == i ||'u' == i ? 1 : 0;
-        }
-
-        return count;
+        return str.replaceAll("[^aeiou]", "").length();
     }
 
 }
