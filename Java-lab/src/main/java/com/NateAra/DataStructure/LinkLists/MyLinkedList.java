@@ -9,11 +9,6 @@ package com.NateAra.DataStructure.LinkLists;
 //    indexOf
 
 public class MyLinkedList {
-    private Node first;
-    private Node last;
-
-    public void addFirst(int value) {
-        Node newNode = new Node(value);
 
         if (first == null) {
             last = newNode;
