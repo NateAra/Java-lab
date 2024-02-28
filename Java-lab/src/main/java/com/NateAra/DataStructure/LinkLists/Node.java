@@ -18,18 +18,6 @@ public class Node {
         this.next = null;
     }
 
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    public Node getNext() {
-        return next;
-    }
-
     public int getData() {
         return data;
     }
