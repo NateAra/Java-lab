@@ -13,8 +13,8 @@ public class Node {
     private int data;
     private Node next;
 
-    public Node(int value) {
-        this.value = value;
+    public Node(int data) {
+        this.data = data;
         this.next = null;
     }
 
@@ -24,6 +24,18 @@ public class Node {
 
     public void setValue(int value) {
         this.value = value;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public int getData() {
+        return data;
+    }
+
+    public void setData(int data) {
+        this.data = data;
     }
 
     public Node getNext() {
