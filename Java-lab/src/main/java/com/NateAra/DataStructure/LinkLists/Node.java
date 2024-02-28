@@ -1,7 +1,16 @@
 package com.NateAra.DataStructure.LinkLists;
 
 public class Node {
-    private int value;
+
+    public static void main(String[] args) {
+        Node x = new Node(1);
+        Node y = new Node(2);
+        x.setNext(y);
+
+        System.out.println(x.getNext().getData());
+    }
+
+    private int data;
     private Node next;
 
     public Node(int value) {
