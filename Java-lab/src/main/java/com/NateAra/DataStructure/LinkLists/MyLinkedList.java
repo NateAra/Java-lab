@@ -93,6 +93,16 @@ public class MyLinkedList {
         return -1;
     }
 
+    public int sizeOfMyLinkedList() {
+        int size = 0;
+        var current = first;
+        while (current != null) {
+            size++;
+            current = current.next;
+        }
+        return size;
+    }
+
     public void printList() {
         ListNode current = first;
 
