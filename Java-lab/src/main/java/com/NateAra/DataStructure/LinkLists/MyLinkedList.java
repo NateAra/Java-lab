@@ -68,7 +68,7 @@ public class MyLinkedList {
     }
 
     public boolean contains(int value) {
-        ListNode current = first;
+        var current = first;
 
         while (current != null) {
             if (current.getValue() == value) {
@@ -80,8 +80,9 @@ public class MyLinkedList {
     }
 
     public int indexOf(int value) {
-        ListNode current = first;
+        var current = first;
         int index = 0;
+
         while (current != null) {
             if (current.getValue() == value) {
                 return index;
