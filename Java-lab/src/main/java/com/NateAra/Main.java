@@ -1,32 +1,27 @@
 package com.NateAra;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+        System.out.println();
 
     }
 
-    public static String highAndLow(String numbers) {
-        String[] sNum = numbers.split(" ");
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> re = new HashMap<>();
 
-        int  large = Integer.parseInt(sNum[0]);
-        int small = large;
-
-        for (String s : sNum) {
-            int num = Integer.parseInt(s);
-
-            if (large < num) {
-                large = num;
+        for (int i = 0; i < nums.length; i++) {
+            int com = target - nums[i];
+            if (re.containsKey(com)) {
+                return new int[] {re.get(com), i};
             }
-            if (small > num) {
-                small = num;
-            }
+            re.put(nums[i], i);
         }
-
-        return large + " " + small;
+        return null;
     }
 
 }
