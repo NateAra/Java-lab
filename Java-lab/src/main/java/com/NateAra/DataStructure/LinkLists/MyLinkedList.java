@@ -8,6 +8,8 @@ package com.NateAra.DataStructure.LinkLists;
 //    contains
 //    indexOf
 
+import java.util.NoSuchElementException;
+
 public class MyLinkedList {
 
     private ListNode first;
@@ -75,7 +77,6 @@ public class MyLinkedList {
         } else {
             System.out.println("List is empty!");
         }
-        System.out.print("null");
     }
 
     private boolean isEmpty() {
