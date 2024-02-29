@@ -36,11 +36,14 @@ public class MyLinkedList {
     }
 
     public void removeFirst() {
-        if (isEmpty()) {
-            System.out.println("List is empty!");
-        } else {
-            first = first.next;
+        if (isEmpty())
+            throw new NoSuchElementException();
+
+        if (first == last) {
+            first = last = null;
         }
+
+        first = first.next;
     }
 
     public void printList() {
