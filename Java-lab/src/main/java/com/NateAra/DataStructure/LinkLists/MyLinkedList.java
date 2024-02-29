@@ -17,6 +17,8 @@ public class MyLinkedList {
     private ListNode first;
     private ListNode last;
 
+    private int size;
+
     public void addLast(int value) {
         var newNode = new ListNode(value);
 
@@ -26,6 +28,7 @@ public class MyLinkedList {
             last.next = newNode;
             last = newNode;
         }
+        size++;
     }
 
     public void addFirst(int value) {
@@ -37,6 +40,7 @@ public class MyLinkedList {
             newNode.next = first;
             first = newNode;
         }
+        size++;
     }
 
     public void removeFirst() {
@@ -48,6 +52,7 @@ public class MyLinkedList {
         }
 
         first = first.next;
+        size--;
     }
 
     public void removeLast() {
@@ -65,6 +70,7 @@ public class MyLinkedList {
         }
         current.next = null;
         last = current;
+        size--;
     }
 
     public boolean contains(int value) {
@@ -102,6 +108,11 @@ public class MyLinkedList {
             size++;
             current = current.next;
         }
+        return size;
+    }
+
+    // This is more preferable
+    public int size() {
         return size;
     }
 
