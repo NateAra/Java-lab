@@ -93,9 +93,11 @@ public class MyLinkedList {
         return -1;
     }
 
+    // This is not optimal if I have a big linkedList
     public int sizeOfMyLinkedList() {
         int size = 0;
         var current = first;
+
         while (current != null) {
             size++;
             current = current.next;
