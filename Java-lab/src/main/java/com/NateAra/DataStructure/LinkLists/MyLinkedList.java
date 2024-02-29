@@ -77,6 +77,19 @@ public class MyLinkedList {
         return false;
     }
 
+    public int indexOf(int value) {
+        ListNode current = first;
+        int index = 0;
+        while (current != null) {
+            if (current.getValue() == value) {
+                return index;
+            }
+            index++;
+            current = current.next;
+        }
+        return -1;
+    }
+
     public void printList() {
         ListNode current = first;
 
