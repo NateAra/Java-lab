@@ -16,7 +16,7 @@ public class MyLinkedList {
     public void addLast(int value) {
         var newNode = new ListNode(value);
 
-        if (first == null) {
+        if (isEmpty()) {
             first = last = newNode;
         } else {
             last.next = newNode;
@@ -27,7 +27,7 @@ public class MyLinkedList {
     public void addFirst(int value) {
         var newNode = new ListNode(value);
 
-        if (first == null) {
+        if (isEmpty()) {
             first = last = newNode;
         } else {
             newNode.next = first;
