@@ -24,6 +24,17 @@ public class MyLinkedList {
         }
     }
 
+    public void addFirst(int value) {
+        var newNode = new ListNode(value);
+
+        if (first == null) {
+            first = last = newNode;
+        } else {
+            newNode.next = first;
+            first = newNode;
+        }
+    }
+
     public void printList() {
         ListNode current = first;
 
