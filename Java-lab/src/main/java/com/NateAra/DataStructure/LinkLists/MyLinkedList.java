@@ -3,8 +3,8 @@ package com.NateAra.DataStructure.LinkLists;
 //    ToDo
 //    addFirst
 //    addLast
-//    deleteFirst
-//    deleteLast
+//    removeFirst
+//    removeLast
 //    contains
 //    indexOf
 
