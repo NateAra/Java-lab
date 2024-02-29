@@ -35,6 +35,14 @@ public class MyLinkedList {
         }
     }
 
+    public void removeFirst() {
+        if (isEmpty()) {
+            System.out.println("List is empty!");
+        } else {
+            first = first.next;
+        }
+    }
+
     public void printList() {
         ListNode current = first;
 
