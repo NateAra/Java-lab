@@ -6,6 +6,7 @@ public class LinkMain {
         num.addLast(1);
         num.addLast(2);
         num.addLast(3);
+        num.addFirst(0);
         num.printList();
     }
 }
