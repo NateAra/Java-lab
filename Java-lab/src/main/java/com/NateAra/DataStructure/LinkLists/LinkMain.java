@@ -6,8 +6,9 @@ public class LinkMain {
         num.addLast(2);
         num.addLast(4);
         num.addLast(6);
+        num.addLast(1);
 
 
-        System.out.println(num.indexOf(6));
+        System.out.println(num.sizeOfMyLinkedList());
     }
 }
