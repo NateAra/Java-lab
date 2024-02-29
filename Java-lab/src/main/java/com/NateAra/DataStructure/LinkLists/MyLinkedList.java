@@ -46,6 +46,24 @@ public class MyLinkedList {
         first = first.next;
     }
 
+    public void removeLast() {
+        if (isEmpty())
+            throw new NoSuchElementException();
+
+        if (first == last) {
+            first = last = null;
+            return;
+        }
+
+        var current = first;
+        while (current.next != last) {
+            current = current.next;
+        }
+        current.next = null;
+        last = current;
+    }
+
+
     public void printList() {
         ListNode current = first;
 
