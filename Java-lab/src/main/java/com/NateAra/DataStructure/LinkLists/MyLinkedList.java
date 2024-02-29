@@ -1,12 +1,14 @@
 package com.NateAra.DataStructure.LinkLists;
 
-//    ToDo
-//    addFirst
-//    addLast
-//    removeFirst
-//    removeLast
-//    contains
-//    indexOf
+//  ToDo
+//  addFirst
+//  addLast
+//  removeFirst
+//  removeLast
+//  contains
+//  indexOf
+//  size
+//  Convert linkedList to array
 
 import java.util.NoSuchElementException;
 
