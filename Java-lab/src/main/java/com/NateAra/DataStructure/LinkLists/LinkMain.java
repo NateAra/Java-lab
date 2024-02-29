@@ -7,7 +7,7 @@ public class LinkMain {
         num.addLast(2);
         num.addLast(3);
         num.addFirst(0);
-        num.removeFirst();
+        num.removeLast();
         num.printList();
     }
 }
