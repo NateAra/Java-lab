@@ -15,13 +15,27 @@ public class MyLinkedList {
 
     public void addLast(int value) {
         var newNode = new ListNode(value);
-        
+
         if (first == null) {
             first = last = newNode;
         } else {
             last.next = newNode;
             last = newNode;
         }
+    }
+
+    public void printList() {
+        ListNode current = first;
+
+        if (current != null) {
+            while (current != null) {
+                System.out.print(current.getValue() + " -> ");
+                current = current.getNext();
+            }
+        } else {
+            System.out.println("List is empty!");
+        }
+        System.out.print("null");
     }
 
 }
