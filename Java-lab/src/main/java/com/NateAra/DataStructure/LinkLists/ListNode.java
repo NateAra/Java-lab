@@ -1,8 +1,8 @@
 package com.NateAra.DataStructure.LinkLists;
 
 public class ListNode {
-    private int value;
-    private ListNode next;
+    private final int value;
+    protected ListNode next;
 
     public ListNode(int value) {
         this.value = value;
