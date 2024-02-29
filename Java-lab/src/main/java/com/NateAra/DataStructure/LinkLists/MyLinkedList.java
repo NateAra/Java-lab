@@ -10,5 +10,8 @@ package com.NateAra.DataStructure.LinkLists;
 
 public class MyLinkedList {
 
+    private ListNode first;
+    private ListNode last;
+    
 
 }
