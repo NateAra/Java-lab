@@ -50,7 +50,6 @@ public class MyLinkedList {
         if (first == last) {
             first = last = null;
         }
-
         first = first.next;
         size--;
     }
