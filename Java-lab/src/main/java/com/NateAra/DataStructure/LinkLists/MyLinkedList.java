@@ -65,6 +65,17 @@ public class MyLinkedList {
         last = current;
     }
 
+    public boolean contains(int value) {
+        ListNode current = first;
+
+        while (current != null) {
+            if (current.getValue() == value) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
 
     public void printList() {
         ListNode current = first;
