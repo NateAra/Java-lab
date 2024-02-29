@@ -49,4 +49,8 @@ public class MyLinkedList {
         System.out.print("null");
     }
 
+    private boolean isEmpty() {
+        return first == null;
+    }
+
 }
