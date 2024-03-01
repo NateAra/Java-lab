@@ -9,6 +9,8 @@ package com.NateAra.DataStructure.LinkLists;
 //  indexOf
 //  size
 //  Convert linkedList to array
+//  Reversing LinkedList
+// Kth Node from the end
 
 import java.util.NoSuchElementException;
 
