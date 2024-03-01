@@ -130,6 +130,23 @@ public class MyLinkedList {
         return result;
     }
 
+    public void reverse() {
+        if (isEmpty()) throw new NoSuchElementException();
+
+        ListNode prev = null;
+        var current = first;
+
+        while (current != null) {
+            var next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+
+        last = first;
+        first = prev;
+    }
+
     public void printList() {
         ListNode current = first;
 
