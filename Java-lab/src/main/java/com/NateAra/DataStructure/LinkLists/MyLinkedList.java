@@ -115,6 +115,19 @@ public class MyLinkedList {
         return size;
     }
 
+    public int[] convertLinkedListToArray() {
+        if (isEmpty()) throw new NoSuchElementException();
+
+        int[] result = new int[size()];
+        var current = first;
+
+        for (int i = 0; i < result.length; i++) {
+            result[i] = current.getValue();
+            current = current.next;
+        }
+        return result;
+    }
+
     public void printList() {
         ListNode current = first;
 
