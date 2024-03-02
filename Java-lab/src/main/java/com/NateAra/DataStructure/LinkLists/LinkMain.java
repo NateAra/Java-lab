@@ -10,7 +10,7 @@ public class LinkMain {
         num.addLast(6);
         num.addLast(1);
         num.addFirst(0);
-        num.reverse();
+
 
         num.printList();
     }
