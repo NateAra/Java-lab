@@ -130,6 +130,25 @@ public class MyLinkedList {
         return result;
     }
 
+    public int getKthFromTheEnd(int k) {
+        if (isEmpty()) throw new IllegalStateException("Empty list");
+
+        var one = first;
+        var second = first;
+
+        for (int i = 0; i < k; i++) {
+            if (second == null) throw new IllegalArgumentException();
+            second = second.next;
+        }
+
+        while (second != null) {
+            one = one.next;
+            second = second.next;
+        }
+
+        return one.getValue();
+    }
+
     public void reverse() {
         if (isEmpty()) throw new NoSuchElementException();
 
