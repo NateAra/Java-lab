@@ -12,6 +12,7 @@ public class LinkMain {
         num.addLast(50);
 
 
+        System.out.println(num.getKthFromTheEnd(1));
         num.printList();
     }
 }
