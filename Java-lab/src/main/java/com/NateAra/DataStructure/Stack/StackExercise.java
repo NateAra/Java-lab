@@ -27,7 +27,7 @@ public class StackExercise {
         char[] strArr = str.toCharArray();
         Stack<Character> temp = new Stack<>();
 
-        for (char i : strArr ) {
+        for (char i : strArr) {
             if (i == '(') {
                 temp.push(i);
             } else if (i == ')') {
