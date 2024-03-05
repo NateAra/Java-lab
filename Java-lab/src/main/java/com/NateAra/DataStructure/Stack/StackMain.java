@@ -3,10 +3,10 @@ package com.NateAra.DataStructure.Stack;
 
 public class StackMain {
     public static void main(String[] args) {
-        String str = "etaN";
+        String str = "(e)(t(a))N";
 
-        StackExercise reverser = new StackExercise();
-        System.out.println(reverser.reverse(str));
+        StackExercise balance = new StackExercise();
+        System.out.println(balance.basicBalancedExpression(str));
     }
 
 }
