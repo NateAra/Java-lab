@@ -41,4 +41,27 @@ public class StackExercise {
 
         return temp.isEmpty();
     }
+
+    public boolean balancedExpression(String str) {
+        Stack<Character> temp = new Stack<>();
+
+        for (char i : str.toCharArray()) {
+            if (i == '(' || i == '[' || i == '{' || i == '<') {
+                temp.push(i);
+            }
+            if (i == ')' || i == ']' || i == '}' || i == '>') {
+                if (temp.isEmpty()) return false;
+                var open = temp.pop();
+                if (
+                        (i == ')' && open != '(') ||
+                        (i == ']' && open != '[') ||
+                        (i == '}' && open != '{') ||
+                        (i == '>' && open != '<')
+                ) {
+                    return false;
+                }
+            }
+        }
+        return temp.isEmpty();
+    }
 }
