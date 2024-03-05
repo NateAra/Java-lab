@@ -1,7 +1,5 @@
 package com.NateAra.DataStructure.LinkLists;
 
-import java.util.Arrays;
-
 public class LinkMain {
     public static void main(String[] args) {
         var num = new MyLinkedList();
