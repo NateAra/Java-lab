@@ -12,6 +12,7 @@ public class StackMain {
         num.pop();
         System.out.println(num);
         System.out.println(num.peek());
+        System.out.println(num.isEmpty());
     }
 
 }
