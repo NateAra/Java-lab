@@ -70,11 +70,8 @@ public class StackExercise {
         return rightBraces.contains(right);
     }
 
-    private boolean bracesDoNotMatch(char left, char right) {
-        return  (right == ')' && left != '(') ||
-                (right == ']' && left != '[') ||
-                (right == '}' && left != '{') ||
-                (right == '>' && left != '<');
+    private boolean bracesMatch(char left, char right) {
+        return leftBraces.indexOf(left) == rightBraces.indexOf(right);
     }
 
 }
