@@ -29,6 +29,7 @@ public class MyStack {
     }
 
     public int peek() {
+        if (count == 0) throw new IllegalStateException("Stack is Empty");
         return items[count - 1];
     }
 
