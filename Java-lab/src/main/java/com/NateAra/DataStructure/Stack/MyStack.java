@@ -19,12 +19,7 @@ public class MyStack {
     }
 
     public void push(int item) {
-        if (count == items.length) {
-            int[] newArray = new int[count * 2];
-            System.arraycopy(items, 0, newArray, 0, count);
-            items = newArray;
-        }
-
+        if (count == items.length) throw new StackOverflowError();
         items[count++] = item;
     }
 
