@@ -9,5 +9,9 @@ package com.NateAra.DataStructure.Stack;
 
 public class MyStack {
 
+    private int[] items;
+    private int count;
+
+
 
 }
