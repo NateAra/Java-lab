@@ -9,11 +9,8 @@ public class StackMain {
         num.push(20);
         num.push(40);
         num.push(50);
-        num.push(60);
-        num.push(70);
-        num.push(80);
+        num.pop();
         System.out.println(num);
-
     }
 
 }
