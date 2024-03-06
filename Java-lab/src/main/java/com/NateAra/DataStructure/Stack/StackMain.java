@@ -11,6 +11,7 @@ public class StackMain {
         num.push(50);
         num.pop();
         System.out.println(num);
+        System.out.println(num.peek());
     }
 
 }
