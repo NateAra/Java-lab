@@ -33,6 +33,9 @@ public class MyStack {
         return items[count - 1];
     }
 
+    public boolean isEmpty() {
+        return count == 0;
+    }
 
     @Override
     public String toString() {
