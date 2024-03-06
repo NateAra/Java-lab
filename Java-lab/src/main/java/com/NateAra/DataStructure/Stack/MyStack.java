@@ -24,6 +24,7 @@ public class MyStack {
     }
 
     public void pop() {
+        if (count == 0) throw new IllegalStateException();
         count--;
     }
 
