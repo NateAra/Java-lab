@@ -1,9 +1,13 @@
 package com.NateAra.DataStructure.Stack;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Stack;
 
 public class StackExercise {
+
+    private final List<Character> leftBraces = Arrays.asList('(', '[', '{', '<');
+    private final List<Character> rightBraces = Arrays.asList(')', ']', '}', '>');
 
     public String reverse(String str) {
         if (str == null) throw new IllegalArgumentException();
@@ -59,12 +63,10 @@ public class StackExercise {
     }
 
     private boolean isLeftBrace(char left) {
-        var leftBraces = Arrays.asList('(', '[', '{', '<');
         return leftBraces.contains(left);
     }
 
     private boolean isRightBrace(char right) {
-        var rightBraces = Arrays.asList(')', ']', '}', '>');
         return rightBraces.contains(right);
     }
 
