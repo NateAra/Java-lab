@@ -56,7 +56,7 @@ public class StackExercise {
             if (isRightBrace(left)) {
                 if (temp.isEmpty()) return false;
                 var right = temp.pop();
-                if (bracesDoNotMatch(right, left)) return false;
+                if (!bracesMatch(right, left)) return false;
             }
         }
         return temp.isEmpty();
