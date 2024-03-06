@@ -64,7 +64,8 @@ public class StackExercise {
     }
 
     private boolean isRightBrace(char right) {
-        return right == ')' || right == ']' || right == '}' || right == '>';
+        var rightBraces = Arrays.asList(')', ']', '}', '>');
+        return rightBraces.contains(right);
     }
 
     private boolean bracesDoNotMatch(char left, char right) {
