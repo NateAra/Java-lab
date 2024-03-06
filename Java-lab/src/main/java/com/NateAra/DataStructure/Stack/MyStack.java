@@ -10,7 +10,7 @@ import java.util.Arrays;
 
 public class MyStack {
 
-    private int[] items;
+    private final int[] items;
     private int count;
 
     public MyStack() {
