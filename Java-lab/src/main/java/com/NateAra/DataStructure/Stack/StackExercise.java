@@ -45,12 +45,10 @@ public class StackExercise {
     public boolean balancedExpression(String str) {
         Stack<Character> temp = new Stack<>();
 
-        for (char i : str.toCharArray()) {
-            if (isOpeningBrace(i)) {
-                temp.push(i);
-            }
+        for (char left : str.toCharArray()) {
+            if (isLeftBrace(left)) temp.push(left);
 
-            if (isClosingBrace(i)) {
+            if (isRightBrace(left)) {
                 if (temp.isEmpty()) return false;
                 var open = temp.pop();
 
@@ -67,12 +65,12 @@ public class StackExercise {
         return temp.isEmpty();
     }
 
-    private boolean isOpeningBrace(char i) {
-        return i == '(' || i == '[' || i == '{' || i == '<';
+    private boolean isLeftBrace(char left) {
+        return left == '(' || left == '[' || left == '{' || left == '<';
     }
 
-    private boolean isClosingBrace(char i) {
-        return i == ')' || i == ']' || i == '}' || i == '>';
+    private boolean isRightBrace(char right) {
+        return right == ')' || right == ']' || right == '}' || right == '>';
     }
 
 }
