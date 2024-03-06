@@ -53,6 +53,7 @@ public class StackExercise {
             if (isClosingBrace(i)) {
                 if (temp.isEmpty()) return false;
                 var open = temp.pop();
+
                 if (
                         (i == ')' && open != '(') ||
                         (i == ']' && open != '[') ||
