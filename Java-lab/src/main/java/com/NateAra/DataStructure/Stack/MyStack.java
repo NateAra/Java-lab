@@ -6,6 +6,7 @@ package com.NateAra.DataStructure.Stack;
 // peek
 // isEmpty
 
+import java.util.Arrays;
 
 public class MyStack {
 
@@ -27,4 +28,8 @@ public class MyStack {
         items[count++] = item;
     }
 
+    @Override
+    public String toString() {
+        return Arrays.toString(Arrays.copyOf(items, count));
+    }
 }
