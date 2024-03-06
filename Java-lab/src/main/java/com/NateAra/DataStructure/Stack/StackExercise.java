@@ -50,16 +50,8 @@ public class StackExercise {
 
             if (isRightBrace(left)) {
                 if (temp.isEmpty()) return false;
-                var open = temp.pop();
-
-                if (
-                        (i == ')' && open != '(') ||
-                        (i == ']' && open != '[') ||
-                        (i == '}' && open != '{') ||
-                        (i == '>' && open != '<')
-                ) {
-                    return false;
-                }
+                var right = temp.pop();
+                if (bracesDoNotMatch(right, left)) return false;
             }
         }
         return temp.isEmpty();
@@ -71,6 +63,13 @@ public class StackExercise {
 
     private boolean isRightBrace(char right) {
         return right == ')' || right == ']' || right == '}' || right == '>';
+    }
+
+    private boolean bracesDoNotMatch(char left, char right) {
+        return  (right == ')' && left != '(') ||
+                (right == ']' && left != '[') ||
+                (right == '}' && left != '{') ||
+                (right == '>' && left != '<');
     }
 
 }
