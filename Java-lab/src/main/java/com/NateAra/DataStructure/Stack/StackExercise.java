@@ -46,10 +46,11 @@ public class StackExercise {
         Stack<Character> temp = new Stack<>();
 
         for (char i : str.toCharArray()) {
-            if (i == '(' || i == '[' || i == '{' || i == '<') {
+            if (isOpeningBrace(i)) {
                 temp.push(i);
             }
-            if (i == ')' || i == ']' || i == '}' || i == '>') {
+
+            if (isClosingBrace(i)) {
                 if (temp.isEmpty()) return false;
                 var open = temp.pop();
                 if (
@@ -64,4 +65,13 @@ public class StackExercise {
         }
         return temp.isEmpty();
     }
+
+    private boolean isOpeningBrace(char i) {
+        return i == '(' || i == '[' || i == '{' || i == '<';
+    }
+
+    private boolean isClosingBrace(char i) {
+        return i == ')' || i == ']' || i == '}' || i == '>';
+    }
+
 }
