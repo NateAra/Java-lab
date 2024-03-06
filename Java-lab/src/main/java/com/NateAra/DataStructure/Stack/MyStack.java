@@ -24,9 +24,6 @@ public class MyStack {
     }
 
     public void pop() {
-        int[] newArray = new int[count - 1];
-        System.arraycopy(items, 0, newArray, 0, count - 1);
-        items = newArray;
         count--;
     }
 
