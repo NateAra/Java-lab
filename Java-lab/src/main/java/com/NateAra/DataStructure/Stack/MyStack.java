@@ -28,6 +28,11 @@ public class MyStack {
         count--;
     }
 
+    public int peek() {
+        return items[count - 1];
+    }
+
+
     @Override
     public String toString() {
         return Arrays.toString(Arrays.copyOf(items, count));
