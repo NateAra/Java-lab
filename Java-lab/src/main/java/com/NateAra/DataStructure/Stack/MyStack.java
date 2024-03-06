@@ -24,4 +24,7 @@ public class MyStack {
             items = newArray;
         }
 
+        items[count++] = item;
+    }
+
 }
