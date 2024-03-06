@@ -4,6 +4,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
+// ToDo == Using Stack
+// Reverse string
+// Basic Balanced Expression " '(', ')' "
+// Advance Balanced Expression " '(', '[', '{', '<', ')', ']', '}', '>' "
+
 public class StackExercise {
 
     private final List<Character> leftBraces = Arrays.asList('(', '[', '{', '<');
