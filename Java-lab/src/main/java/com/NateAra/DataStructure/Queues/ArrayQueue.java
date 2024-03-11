@@ -32,7 +32,8 @@ public class ArrayQueue {
         if (isEmpty()) throw new NoSuchElementException("Queue is Empty");
 
         items[first] = 0;
-        first++;
+        first = (first + 1) % items.length;
+        count--;
     }
 
     public int peek() {
