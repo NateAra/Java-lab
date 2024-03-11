@@ -48,7 +48,8 @@ public class ArrayQueue {
         return count == items.length;
     }
 
-    public String print() {
-        return Arrays.toString(Arrays.copyOf(items, count));
+    @Override
+    public String toString() {
+        return Arrays.toString(items);
     }
 }
