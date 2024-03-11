@@ -8,5 +8,8 @@ package com.NateAra.DataStructure.Queues;
 // isFull
 public class ArrayQueue {
 
-    
+    private int[] items;
+    private int count;
+
+
 }
