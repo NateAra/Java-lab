@@ -16,5 +16,9 @@ public class ArrayQueue {
         this.count = 0;
     }
 
+    public void add(int item) {
+        items[count] = item;
+        count++;
+    }
 
 }
