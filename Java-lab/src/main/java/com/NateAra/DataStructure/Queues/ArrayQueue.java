@@ -23,7 +23,8 @@ public class ArrayQueue {
     public void add(int item) {
         if (isFull()) throw new IllegalStateException("Queue is Full");
 
-        items[count] = item;
+        items[last] = item;
+        last = (last + 1) % items.length;
         count++;
     }
 
