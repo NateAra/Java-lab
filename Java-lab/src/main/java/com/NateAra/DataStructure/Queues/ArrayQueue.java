@@ -31,10 +31,6 @@ public class ArrayQueue {
         return items[first];
     }
 
-    public String print() {
-        return Arrays.toString(Arrays.copyOf(items, count));
-    }
-
     public boolean isEmpty() {
         return count == 0;
     }
@@ -43,4 +39,7 @@ public class ArrayQueue {
         return count == 5;
     }
 
+    public String print() {
+        return Arrays.toString(Arrays.copyOf(items, count));
+    }
 }
