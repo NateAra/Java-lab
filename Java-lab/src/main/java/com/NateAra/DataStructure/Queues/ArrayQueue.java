@@ -19,6 +19,8 @@ public class ArrayQueue {
     }
 
     public void add(int item) {
+        if (isFull()) throw new IllegalArgumentException("Queue is Full");
+
         items[count] = item;
         count++;
     }
