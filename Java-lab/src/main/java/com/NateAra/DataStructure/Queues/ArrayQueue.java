@@ -1,5 +1,7 @@
 package com.NateAra.DataStructure.Queues;
 
+import java.util.Arrays;
+
 // ToDo
 // enqueue
 // dequeue
@@ -8,7 +10,7 @@ package com.NateAra.DataStructure.Queues;
 // isFull
 public class ArrayQueue {
 
-    private int[] items;
+    private final int[] items;
     private int count;
 
     public ArrayQueue() {
@@ -25,5 +27,5 @@ public class ArrayQueue {
     public String print() {
         return Arrays.toString(Arrays.copyOf(items, count));
     }
-    
+
 }
