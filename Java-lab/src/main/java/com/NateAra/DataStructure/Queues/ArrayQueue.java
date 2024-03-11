@@ -16,8 +16,8 @@ public class ArrayQueue {
     private int last;
     private int count;
 
-    public ArrayQueue() {
-        this.items = new int[5];
+    public ArrayQueue(int length) {
+        this.items = new int[length];
     }
 
     public void add(int item) {
