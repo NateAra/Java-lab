@@ -16,12 +16,10 @@ public class ArrayQueue {
 
     public ArrayQueue() {
         this.items = new int[5];
-        this.count = 0;
-        this.first = 0;
     }
 
     public void add(int item) {
-        if (isFull()) throw new IllegalArgumentException("Queue is Full");
+        if (isFull()) throw new IllegalStateException("Queue is Full");
 
         items[count] = item;
         count++;
