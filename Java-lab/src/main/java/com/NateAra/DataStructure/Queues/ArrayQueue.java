@@ -12,8 +12,9 @@ import java.util.NoSuchElementException;
 public class ArrayQueue {
 
     private final int[] items;
-    private int count;
     private int first;
+    private int last;
+    private int count;
 
     public ArrayQueue() {
         this.items = new int[5];
