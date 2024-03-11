@@ -21,4 +21,9 @@ public class ArrayQueue {
         count++;
     }
 
+
+    public String print() {
+        return Arrays.toString(Arrays.copyOf(items, count));
+    }
+    
 }
