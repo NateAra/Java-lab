@@ -28,4 +28,12 @@ public class ArrayQueue {
         return Arrays.toString(Arrays.copyOf(items, count));
     }
 
+    public boolean isEmpty() {
+        return count == 0;
+    }
+
+    public boolean isFull() {
+        return count == 5;
+    }
+
 }
