@@ -1,6 +1,7 @@
 package com.NateAra.DataStructure.Queues;
 
 import java.util.Arrays;
+import java.util.NoSuchElementException;
 
 // ToDo
 // enqueue
@@ -25,7 +26,12 @@ public class ArrayQueue {
         count++;
     }
 
+    public void dequeue() {
+        if (isEmpty()) throw new NoSuchElementException("Queue is Empty");
 
+        items[first] = 0;
+        first++;
+    }
 
     public int peek() {
         return items[first];
