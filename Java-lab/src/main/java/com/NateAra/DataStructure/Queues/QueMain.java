@@ -8,6 +8,9 @@ public class QueMain {
         ArrayQueue arr = new ArrayQueue();
         arr.add(10);
         arr.add(20);
+        arr.add(30);
+        arr.add(40);
+        arr.add(50);
         System.out.println(arr.print());
     }
 }
