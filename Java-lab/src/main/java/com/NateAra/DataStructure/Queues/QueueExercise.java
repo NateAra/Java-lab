@@ -1,5 +1,6 @@
 package com.NateAra.DataStructure.Queues;
 
+import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -12,20 +13,21 @@ public class QueueExercise {
         num.add(20);
         num.add(30);
         System.out.println(num);
+
         reverse(num);
         System.out.println(num);
     }
 
     public static void reverse(Queue<Integer> queue) {
         // ToDo - Using Only (Add, remove, IsEmpty)
-        Stack<Integer> re = new Stack<>();
+        Stack<Integer> stack = new Stack<>();
 
         while (!queue.isEmpty()) {
-            re.add(queue.remove());
+            stack.push(queue.remove());
         }
 
-        while (!re.isEmpty()) {
-            queue.add(re.pop());
+        while (!stack.isEmpty()) {
+            queue.add(stack.pop());
         }
     }
 
