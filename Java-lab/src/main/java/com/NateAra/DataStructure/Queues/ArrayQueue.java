@@ -45,7 +45,7 @@ public class ArrayQueue {
     }
 
     public boolean isFull() {
-        return count == 5;
+        return count == items.length;
     }
 
     public String print() {
