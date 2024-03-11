@@ -12,10 +12,12 @@ public class ArrayQueue {
 
     private final int[] items;
     private int count;
+    private int first;
 
     public ArrayQueue() {
         this.items = new int[5];
         this.count = 0;
+        this.first = 0;
     }
 
     public void add(int item) {
