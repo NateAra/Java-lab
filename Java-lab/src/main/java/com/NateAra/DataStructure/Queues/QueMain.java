@@ -11,10 +11,11 @@ public class QueMain {
         arr.add(30);
         arr.add(40);
         arr.add(50);
-        System.out.println(arr.print());
         arr.dequeue();
         arr.dequeue();
-        System.out.println(arr.print());
+        arr.add(60);
+        arr.add(70);
+        System.out.println(arr);
         System.out.println(arr.peek());
     }
 }
