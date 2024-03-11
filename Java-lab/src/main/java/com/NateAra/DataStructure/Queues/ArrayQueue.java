@@ -26,6 +26,11 @@ public class ArrayQueue {
     }
 
 
+
+    public int peek() {
+        return items[first];
+    }
+
     public String print() {
         return Arrays.toString(Arrays.copyOf(items, count));
     }
