@@ -12,5 +12,9 @@ public class QueMain {
         arr.add(40);
         arr.add(50);
         System.out.println(arr.print());
+        arr.dequeue();
+        arr.dequeue();
+        System.out.println(arr.print());
+        System.out.println(arr.peek());
     }
 }
