@@ -1,8 +1,11 @@
 package com.NateAra.DataStructure.Queues;
 
+import java.util.Stack;
+
 public class StackQueue {
 
     private int[] items;
+    private Stack<Integer> stack1;
     private int count;
 
     public StackQueue() {
