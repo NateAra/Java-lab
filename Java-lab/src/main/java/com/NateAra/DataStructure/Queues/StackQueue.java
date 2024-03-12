@@ -10,4 +10,8 @@ public class StackQueue {
     }
 
 
+    @Override
+    public String toString() {
+        return stack1.toString() + "\n" + stack2.toString();
+    }
 }
