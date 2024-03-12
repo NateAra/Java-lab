@@ -9,6 +9,10 @@ public class StackQueue {
         this.items = new int[5];
     }
 
+    public void enqueue(int item) {
+        stack1.push(item);
+        count++;
+    }
 
     @Override
     public String toString() {
