@@ -6,7 +6,8 @@ public class StackQueue {
     private int count;
 
     public StackQueue() {
-        this.items = new int[5];
+        this.stack1 = new Stack<>();
+        this.stack2 = new Stack<>();
     }
 
     public void enqueue(int item) {
