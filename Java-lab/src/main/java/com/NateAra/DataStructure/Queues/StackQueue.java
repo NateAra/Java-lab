@@ -4,8 +4,8 @@ import java.util.Stack;
 
 public class StackQueue {
 
-    private Stack<Integer> stack1;
-    private Stack<Integer> stack2;
+    private final Stack<Integer> stack1;
+    private final Stack<Integer> stack2;
     private int count;
 
     public StackQueue() {
