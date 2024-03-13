@@ -27,6 +27,11 @@ public class StackQueue {
             stack1.push(stack2.pop());
         }
     }
+/*
+    This is more efficient,
+    but when shouting it does show you straight forward,
+    but still does the job in an efficient matter.
+*/
     public void dequeue2() {
         if (stack1.isEmpty() && stack2.isEmpty()) throw new IllegalStateException();
 
