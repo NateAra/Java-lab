@@ -42,8 +42,14 @@ public class StackQueue {
         stack2.pop();
     }
 
+
+
     @Override
     public String toString() {
         return stack1 + "\n" + stack2;
+    }
+
+    private boolean isEmpty() {
+        return stack1.isEmpty() && stack2.isEmpty();
     }
 }
