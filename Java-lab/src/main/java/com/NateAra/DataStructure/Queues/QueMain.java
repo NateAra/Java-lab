@@ -3,7 +3,6 @@ package com.NateAra.DataStructure.Queues;
 
 public class QueMain {
     public static void main(String[] args) {
-//        Stack<Integer> stack = new Stack<>();
 
         StackQueue stack = new StackQueue();
         stack.enqueue(10);
@@ -17,6 +16,7 @@ public class QueMain {
         stack.enqueue(70);
         stack.dequeue2();
         System.out.println(stack);
+        System.out.println(stack.peek());
 
     }
 }
