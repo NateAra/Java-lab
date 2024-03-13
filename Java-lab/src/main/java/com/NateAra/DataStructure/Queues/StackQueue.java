@@ -17,6 +17,8 @@ public class StackQueue {
     }
 
     public void dequeue() {
+        if (stack1.isEmpty()) throw new IllegalStateException();
+
         while (!stack1.isEmpty()) {
             stack2.push(stack1.pop());
         }
