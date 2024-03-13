@@ -42,7 +42,15 @@ public class StackQueue {
         stack2.pop();
     }
 
+    public int peek() {
+        if (isEmpty()) throw new IllegalStateException();
 
+        if (stack2.isEmpty())
+            while (!stack1.isEmpty()) {
+                stack2.push(stack1.pop());
+            }
+        return stack2.peek();
+    }
 
     @Override
     public String toString() {
