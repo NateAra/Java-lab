@@ -14,7 +14,6 @@ public class StackQueue {
 
     public void enqueue(int item) {
         stack1.push(item);
-        count++;
     }
 
     public void dequeue() {
