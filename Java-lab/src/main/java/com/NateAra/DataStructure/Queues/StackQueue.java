@@ -6,7 +6,6 @@ public class StackQueue {
 
     private final Stack<Integer> stack1;
     private final Stack<Integer> stack2;
-    private int count;
 
     public StackQueue() {
         this.stack1 = new Stack<>();
