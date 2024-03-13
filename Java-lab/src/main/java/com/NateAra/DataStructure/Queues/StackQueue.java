@@ -33,7 +33,7 @@ public class StackQueue {
     but still does the job in an efficient matter.
 */
     public void dequeue2() {
-        if (stack1.isEmpty() && stack2.isEmpty()) throw new IllegalStateException();
+        if (isEmpty()) throw new IllegalStateException();
 
         if (stack2.isEmpty())
             while (!stack1.isEmpty()) {
