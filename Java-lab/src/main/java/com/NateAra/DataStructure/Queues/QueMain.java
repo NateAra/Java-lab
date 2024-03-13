@@ -11,8 +11,11 @@ public class QueMain {
         stack.enqueue(30);
         stack.enqueue(40);
         stack.enqueue(50);
-        stack.dequeue();
-        stack.dequeue();
+        stack.dequeue2();
+        stack.dequeue2();
+        stack.enqueue(60);
+        stack.enqueue(70);
+        stack.dequeue2();
         System.out.println(stack);
 
     }
