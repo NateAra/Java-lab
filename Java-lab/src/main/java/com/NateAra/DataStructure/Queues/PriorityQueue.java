@@ -3,9 +3,11 @@ package com.NateAra.DataStructure.Queues;
 public class PriorityQueue {
 
     private int[] items;
+    private int count;
 
     public PriorityQueue() {
         this.items = new int[5];
+        this.count = 0;
     }
 
     public void add(int item) {
