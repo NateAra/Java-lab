@@ -30,5 +30,10 @@ public class PriorityQueue {
         count++;
     }
 
-
+    @Override
+    public String toString() {
+        int[] newArray = new int[count];
+        System.arraycopy(items, 0, newArray, 0, count);
+        return Arrays.toString(newArray);
+    }
 }
