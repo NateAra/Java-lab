@@ -2,12 +2,12 @@ package com.NateAra.DataStructure.Queues;
 
 import java.util.Arrays;
 
-public class PriorityQueue {
+public class PriorityQueueArr {
 
     private int[] items;
     private int count;
 
-    public PriorityQueue() {
+    public PriorityQueueArr() {
         this.items = new int[5];
         this.count = 0;
     }
