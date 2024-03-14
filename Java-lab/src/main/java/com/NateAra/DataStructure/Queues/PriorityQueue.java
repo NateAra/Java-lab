@@ -8,4 +8,25 @@ public class PriorityQueue {
         this.items = new int[5];
     }
 
+    public void add(int item) {
+        if (count == items.length) {
+            int[] newArray = new int[count * 2];
+            System.arraycopy(items, 0, newArray, 0, count);
+            items = newArray;
+        }
+
+        int i;
+
+        for (i = count - 1; i >= 0; i--) {
+            if (item < items[i]) {
+                items[i + 1] = items[i];
+            } else {
+                break;
+            }
+        }
+        items[i + 1] = item;
+        count++;
+    }
+
+
 }
