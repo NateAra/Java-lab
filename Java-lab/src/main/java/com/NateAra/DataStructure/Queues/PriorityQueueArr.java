@@ -32,6 +32,12 @@ public class PriorityQueue {
         count++;
     }
 
+    public void remove() {
+        int[] newArray = new int[count];
+        System.arraycopy(items, 1, newArray, 0, count);
+        items = newArray;
+    }
+
     @Override
     public String toString() {
         int[] newArray = new int[count];
