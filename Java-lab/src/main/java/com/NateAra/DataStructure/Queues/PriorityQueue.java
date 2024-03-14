@@ -1,5 +1,7 @@
 package com.NateAra.DataStructure.Queues;
 
+import java.util.Arrays;
+
 public class PriorityQueue {
 
     private int[] items;
