@@ -32,10 +32,15 @@ public class PriorityQueueArr {
         count++;
     }
 
-    public void remove() {
-        int[] newArray = new int[count];
-        System.arraycopy(items, 1, newArray, 0, count);
-        items = newArray;
+    public int remove() {
+        if (isEmpty()) throw new IllegalStateException();
+
+        int item = items[0];
+        for (int i = 0; i < count - 1; i++) {
+            items[i] = items[i + 1];
+        }
+        count--;
+        return item;
     }
 
     @Override
