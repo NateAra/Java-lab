@@ -8,14 +8,14 @@ public class SetsMain {
     public static void main(String[] args) {
         int[] arr = {1, 2, 2, 3, 4, 4, 5,};
 
-        System.out.println(Arrays.toString(removeRepeatingNum(arr)));
+        System.out.println(removeRepeatingNum(arr));
     }
 
-    public static int[] removeRepeatingNum(int[] array) {
+    public static String  removeRepeatingNum(int[] array) {
         Set<Integer> num = new HashSet<>();
         for (int i : array) {
             num.add(i);
         }
-        return num.stream().mapToInt(Integer::intValue).toArray();
+        return Arrays.toString(num.stream().mapToInt(Integer::intValue).toArray());
     }
 }
