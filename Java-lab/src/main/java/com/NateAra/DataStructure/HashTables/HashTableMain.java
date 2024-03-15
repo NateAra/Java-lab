@@ -32,5 +32,21 @@ public class HashTableMain {
         System.out.println("No non-repeating chars");
     }
 
+    public static void findFirstNonRepeatingCharSimpler(String str) {
 
+        Map<Character, Integer> ma = new HashMap<>();
+
+        for (var ch : str.toCharArray()) {
+            var count = ma.containsKey(ch) ? ma.get(ch) : 0;
+            ma.put(ch, count + 1);
+        }
+
+        for (var ch : str.toCharArray()) {
+            if (ma.get(ch) == 1) {
+                System.out.println("The first non-repeating character is: " + ch);
+                return;
+            }
+        }
+        System.out.println("No non-repeating chars");
+    }
 }
