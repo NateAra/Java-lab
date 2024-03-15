@@ -1,12 +1,16 @@
 package com.NateAra.DataStructure.HashTables.Sets;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class SetsMain {
     public static void main(String[] args) {
         int[] arr = {1, 2, 2, 3, 4, 4, 5,};
 
         System.out.println(Arrays.toString(removeRepeatingNum(arr)));
     }
-    
+
     public static int[] removeRepeatingNum(int[] array) {
         Set<Integer> num = new HashSet<>();
         for (int i : array) {
