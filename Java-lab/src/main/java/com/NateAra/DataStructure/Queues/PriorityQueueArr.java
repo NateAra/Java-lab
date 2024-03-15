@@ -49,4 +49,8 @@ public class PriorityQueueArr {
         System.arraycopy(items, 0, newArray, 0, count);
         return Arrays.toString(newArray);
     }
+
+    private boolean isEmpty() {
+        return count == 0;
+    }
 }
