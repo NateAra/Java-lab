@@ -12,11 +12,11 @@ public class SetsMain {
     }
 
     public static String removeRepeatingNum(int[] array) {
-        Set<Integer> num = new HashSet<>();
+        Set<Integer> set = new HashSet<>();
         for (int i : array) {
-            num.add(i);
+            set.add(i);
         }
-        return Arrays.toString(num.stream().mapToInt(Integer::intValue).toArray());
+        return Arrays.toString(set.stream().mapToInt(Integer::intValue).toArray());
     }
 
     public static String firstRepeatedChar(String str) {
