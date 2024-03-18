@@ -20,12 +20,12 @@ public class SetsMain {
     }
 
     public static String firstRepeatedChar(String str) {
-        Set<Character> bag = new HashSet<>();
+        Set<Character> set = new HashSet<>();
         for (char i : str.toCharArray()) {
-            if (bag.contains(i)) {
+            if (set.contains(i)) {
                 return "The first repeating character is: " + i;
             }
-            bag.add(i);
+            set.add(i);
         }
         return "No repeating Character";
     }
