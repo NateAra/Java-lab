@@ -11,7 +11,7 @@ public class SetsMain {
         System.out.println(removeRepeatingNum(arr));
     }
 
-    public static String  removeRepeatingNum(int[] array) {
+    public static String removeRepeatingNum(int[] array) {
         Set<Integer> num = new HashSet<>();
         for (int i : array) {
             num.add(i);
