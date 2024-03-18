@@ -14,4 +14,7 @@ public class MyHashTable {
         }
     }
 
+    private LinkedList<Entry>[] entries = new LinkedList[5];
+
+    
 }
