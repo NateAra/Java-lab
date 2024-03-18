@@ -18,4 +18,15 @@ public class SetsMain {
         }
         return Arrays.toString(num.stream().mapToInt(Integer::intValue).toArray());
     }
+
+    public static String firstRepeatedChar(String str) {
+        Set<Character> bag = new HashSet<>();
+        for (char i : str.toCharArray()) {
+            if (bag.contains(i)) {
+                return "The first repeating character is: " + i;
+            }
+            bag.add(i);
+        }
+        return "No repeating Character";
+    }
 }
