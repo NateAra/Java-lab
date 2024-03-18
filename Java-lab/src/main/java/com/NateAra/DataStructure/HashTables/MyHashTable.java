@@ -19,11 +19,13 @@ public class MyHashTable {
     public void put(int key, String value) {
         var index = hash(key);
 
-        if (entries[index] == null) {
-            entries[index] = new LinkedList<>();
+        var bucket = entries[index];
+
+        if (bucket == null) {
+            bucket = new LinkedList<>();
         }
 
-        for (var entry : entries[index]) {
+        for (var entry : bucket) {
             if (entry.key == key) {
                 entry.value = value;
                 return;
@@ -31,11 +33,11 @@ public class MyHashTable {
         }
 
         var entry = new Entry(key, value);
-        entries[index].addLast(entry);
+        bucket.addLast(entry);
     }
-
 
     private int hash(int key) {
         return key % entries.length;
     }
+
 }
