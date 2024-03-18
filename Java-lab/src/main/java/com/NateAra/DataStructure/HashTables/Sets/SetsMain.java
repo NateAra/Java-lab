@@ -6,9 +6,9 @@ import java.util.Set;
 
 public class SetsMain {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 2, 3, 4, 4, 5,};
+        String word = "Banana";
 
-        System.out.println(removeRepeatingNum(arr));
+        System.out.println(firstRepeatedChar(word));
     }
 
     public static String removeRepeatingNum(int[] array) {
