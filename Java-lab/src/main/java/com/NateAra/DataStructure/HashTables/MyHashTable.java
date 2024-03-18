@@ -16,5 +16,10 @@ public class MyHashTable {
 
     private LinkedList<Entry>[] entries = new LinkedList[5];
 
-    
+
+
+
+    private int hash(int key) {
+        return key % entries.length;
+    }
 }
