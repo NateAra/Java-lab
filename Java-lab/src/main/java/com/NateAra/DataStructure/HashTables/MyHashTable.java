@@ -47,6 +47,19 @@ public class MyHashTable {
         return "Found No Key";
     }
 
+    public String remove(int key) {
+        var index = hash(key);
+        if (entries[index] != null) {
+            for (var entry : entries[index]) {
+                if (entry.key == key) {
+                    entries[index].remove(entry);
+                    return entry.value;
+                }
+            }
+        }
+        throw new IllegalStateException("No such element");
+    }
+
     private int hash(int key) {
         return key % entries.length;
     }
