@@ -1,4 +1,4 @@
-package com.NateAra.DataStructure.LinkLists;
+package com.NateAra.DataStructure.Part1.LinkLists;
 
 public class ListNode {
     private final int value;
