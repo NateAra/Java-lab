@@ -4,8 +4,8 @@ import java.util.LinkedList;
 
 public class MyHashTable {
 
-    private class Entry {
-        private int key;
+    private static class Entry {
+        private final int key;
         private String value;
 
         public Entry(int key, String value) {
@@ -14,7 +14,7 @@ public class MyHashTable {
         }
     }
 
-    private LinkedList<Entry>[] entries = new LinkedList[5];
+    private final LinkedList<Entry>[] entries = new LinkedList[5];
 
     public void put(int key, String value) {
         var index = hash(key);
