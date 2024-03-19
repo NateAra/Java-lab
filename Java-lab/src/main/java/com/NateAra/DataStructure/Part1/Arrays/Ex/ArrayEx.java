@@ -1,4 +1,4 @@
-package com.NateAra.DataStructure.Arrays.Ex;
+package com.NateAra.DataStructure.Part1.Arrays.Ex;
 
 /* ToDo
 * insert

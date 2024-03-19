@@ -1,4 +1,4 @@
-package com.NateAra.DataStructure.Arrays.Ex;
+package com.NateAra.DataStructure.Part1.Arrays.Ex;
 
 public class ArrayExMain {
     public static void main(String[] args) {

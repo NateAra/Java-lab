@@ -1,4 +1,4 @@
-package com.NateAra.DataStructure.Queues;
+package com.NateAra.DataStructure.Part1.Queues;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;

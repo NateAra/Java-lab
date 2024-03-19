@@ -1,4 +1,4 @@
-package com.NateAra.DataStructure.Arrays;
+package com.NateAra.DataStructure.Part1.Arrays;
 
 
 public class ArrMain {
