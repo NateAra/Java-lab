@@ -7,10 +7,9 @@ public class HashMapExercises {
     public static void main(String[] args) {
         Map<Integer, String> map = new HashMap<>();
         map.put(1, "Nate");
-        System.out.println(map);
+        map.put(6, "Johny");
+        System.out.println(map.get(1));
 
-        String n = "a green apple";
-        findFirstNonRepeatingCharSimpler(n);
     }
 
     public static void findFirstNonRepeatingChar(String str) {
