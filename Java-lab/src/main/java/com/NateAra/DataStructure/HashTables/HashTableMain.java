@@ -4,9 +4,13 @@ public class HashTableMain {
     public static void main(String[] args) {
 
         MyHashTable table = new MyHashTable();
-        table.put(22, "Nate");
-        table.put(11, "Johny");
-        System.out.println(table.get(11));
+        table.put(2, "Nate");
+        table.put(1, "Johny");
+        table.put(6, "Bob");
+        table.put(16, "luna");
+        System.out.println(table);
+        System.out.println(table.remove(6));
+        System.out.println(table);
     }
 
 }
