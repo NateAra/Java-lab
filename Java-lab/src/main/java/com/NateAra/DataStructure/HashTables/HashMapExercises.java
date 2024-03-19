@@ -9,4 +9,11 @@ public class HashMapExercises {
         map.put(1, "Nate");
         System.out.println(map);
     }
+
+
+
+
+
+
+
 }
