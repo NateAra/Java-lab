@@ -64,4 +64,33 @@ public class MyHashTable {
         return key % entries.length;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("{");
+
+        for (int i = 0; i < entries.length; i++) {
+            if (entries[i] == null) {
+                sb.append("null");
+            } else {
+                sb.append("{");
+                // Use a flag to avoid adding a comma before the first element
+                boolean firstElement = true;
+                for (Entry entry : entries[i]) {
+                    if (!firstElement) {
+                        sb.append(", ");
+                    }
+                    sb.append(entry.key).append("=").append(entry.value);
+                    firstElement = false;
+                }
+                sb.append("}");
+            }
+            if (i < entries.length - 1) {
+                sb.append(", ");
+            }
+        }
+
+        sb.append("}");
+        return sb.toString();
+    }
 }
