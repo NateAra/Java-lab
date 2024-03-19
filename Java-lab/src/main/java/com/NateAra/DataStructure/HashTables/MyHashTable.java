@@ -37,9 +37,11 @@ public class MyHashTable {
     public String get(int key) {
         var index = hash(key);
 
-        for (var entry : entries[index]) {
-            if (entry.key == key) {
-                return entry.value;
+        if (entries[index] != null) {
+            for (var entry : entries[index]) {
+                if (entry.key == key) {
+                    return entry.value;
+                }
             }
         }
         return "Found No Key";
