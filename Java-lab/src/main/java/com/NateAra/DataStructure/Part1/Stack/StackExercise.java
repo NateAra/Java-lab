@@ -1,4 +1,4 @@
-package com.NateAra.DataStructure.Stack;
+package com.NateAra.DataStructure.Part1.Stack;
 
 import java.util.Arrays;
 import java.util.List;

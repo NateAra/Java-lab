@@ -1,4 +1,4 @@
-package com.NateAra.DataStructure.HashTables.Sets;
+package com.NateAra.DataStructure.Part1.HashTables.Sets;
 
 import java.util.Arrays;
 import java.util.HashSet;
