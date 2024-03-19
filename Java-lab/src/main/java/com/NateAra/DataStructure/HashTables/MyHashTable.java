@@ -34,6 +34,17 @@ public class MyHashTable {
         entries[index].addLast(entry);
     }
 
+    public String get(int key) {
+        var index = hash(key);
+
+        for (var entry : entries[index]) {
+            if (entry.key == key) {
+                return entry.value;
+            }
+        }
+        return "Found No Key";
+    }
+
     private int hash(int key) {
         return key % entries.length;
     }
