@@ -19,4 +19,14 @@ public class MyHashTableTest {
         assertEquals("Two", hashTable.get(2));
         assertEquals("Three", hashTable.get(3));
     }
+
+    @Test
+    void remove() {
+        hashTable.put(1, "One");
+        hashTable.put(2, "Two");
+        hashTable.put(3, "Three");
+
+        assertEquals("Two", hashTable.remove(2));
+        assertThrows(IllegalStateException.class, () -> hashTable.remove(2));
+    }
 }
