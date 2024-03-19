@@ -7,9 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MyHashTableTest {
 
+    private final MyHashTable hashTable = new MyHashTable();
+
     @Test
     void putAndGet() {
-        MyHashTable hashTable = new MyHashTable();
         hashTable.put(1, "One");
         hashTable.put(2, "Two");
         hashTable.put(3, "Three");
