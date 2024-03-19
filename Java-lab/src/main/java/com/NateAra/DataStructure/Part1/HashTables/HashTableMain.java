@@ -1,4 +1,4 @@
-package com.NateAra.DataStructure.HashTables;
+package com.NateAra.DataStructure.Part1.HashTables;
 
 public class HashTableMain {
     public static void main(String[] args) {
