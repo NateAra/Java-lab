@@ -52,4 +52,19 @@ public class BinaryTree {
         return current;
     }
 
+    public boolean find(int value) {
+        var current = root;
+
+        while (current != null) {
+            if (value < current.value) {
+                current = current.left;
+            } else if (value > current.value) {
+                current = current.right;
+            } else {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
