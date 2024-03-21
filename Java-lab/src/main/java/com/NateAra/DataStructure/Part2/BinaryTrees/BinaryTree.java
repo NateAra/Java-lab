@@ -52,7 +52,9 @@ public class BinaryTree {
         return false;
     }
 
-
+    public boolean findUsingRecursive(int value) {
+        return false;
+    }
 
     private BinaryTreeNode insertRecursive(BinaryTreeNode current, int value) {
         if (current == null) {
@@ -69,18 +71,7 @@ public class BinaryTree {
         return current;
     }
 
-    public boolean find(int value) {
-        var current = root;
-
-        while (current != null) {
-            if (value < current.value) {
-                current = current.left;
-            } else if (value > current.value) {
-                current = current.right;
-            } else {
-                return true;
-            }
-        }
+    private boolean findRecursive(BinaryTreeNode current, int value) {
         return false;
     }
 
