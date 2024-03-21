@@ -37,6 +37,23 @@ public class BinaryTree {
         root = insertRecursive(root, value);
     }
 
+    public boolean find(int value) {
+        var current = root;
+
+        while (current != null) {
+            if (value < current.value) {
+                current = current.left;
+            } else if (value > current.value) {
+                current = current.right;
+            } else {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+
     private BinaryTreeNode insertRecursive(BinaryTreeNode current, int value) {
         if (current == null) {
             return new BinaryTreeNode(value);
