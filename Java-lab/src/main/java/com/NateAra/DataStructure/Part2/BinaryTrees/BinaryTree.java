@@ -12,7 +12,18 @@ public class BinaryTree {
     }
 
     private BinaryTreeNode insertRecursive(BinaryTreeNode current, int value) {
-        return null;
+        if (current == null) {
+            return new BinaryTreeNode(value);
+        }
+
+        if (value < current.value) {
+            current.left = insertRecursive(current.left, value);
+        } else if (value > current.value) {
+            current.right = insertRecursive(current.right, value);
+        } else {
+            return current;
+        }
+        return current;
     }
 
 }
