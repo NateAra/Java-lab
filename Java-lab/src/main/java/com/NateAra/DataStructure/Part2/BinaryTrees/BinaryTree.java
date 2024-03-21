@@ -7,6 +7,32 @@ public class BinaryTree {
         this.root = null;
     }
 
+    public void insert(int value) {
+        var newNode = new BinaryTreeNode(value);
+
+        if (root == null) {
+            root = newNode;
+            return;
+        }
+
+        var current = root;
+        while (true) {
+            if (value < current.value) {
+                if (current.left == null) {
+                    current.left = newNode;
+                    break;
+                }
+                current = current.left;
+            } else {
+                if (current.right == null) {
+                    current.right = newNode;
+                    break;
+                }
+                current = current.right;
+            }
+        }
+    }
+
     public void insertUsingRecursive(int value) {
         root = insertRecursive(root, value);
     }
