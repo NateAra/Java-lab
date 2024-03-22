@@ -71,7 +71,16 @@ public class BinaryTree {
         return current;
     }
 
-    private boolean findRecursive(BinaryTreeNode current, int value) {
-        return false;
+    private boolean findUsingRecursive(BinaryTreeNode current, int value) {
+        if (current == null) {
+            return false;
+        }
+        if (current.value == value) {
+            return true;
+        }
+
+        return value < current.value
+                ? findUsingRecursive(current.left, value)
+                : findUsingRecursive(current.right, value);
     }
 }
