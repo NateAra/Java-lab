@@ -52,8 +52,8 @@ public class BinaryTree {
         return false;
     }
 
-    public boolean findUsingRecursive(int value) {
-        return false;
+    public boolean findRecursive(int value) {
+        return findUsingRecursive(root, value);
     }
 
     private BinaryTreeNode insertRecursive(BinaryTreeNode current, int value) {
