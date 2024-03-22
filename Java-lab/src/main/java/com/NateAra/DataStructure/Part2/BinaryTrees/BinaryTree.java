@@ -52,7 +52,7 @@ public class BinaryTree {
         return false;
     }
 
-    public boolean findRecursive(int value) {
+    public boolean findWithRecursive(int value) {
         return findUsingRecursive(root, value);
     }
 
