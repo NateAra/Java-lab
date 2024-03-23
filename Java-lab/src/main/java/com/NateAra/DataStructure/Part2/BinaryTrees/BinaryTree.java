@@ -83,4 +83,14 @@ public class BinaryTree {
                 ? findUsingRecursive(current.left, value)
                 : findUsingRecursive(current.right, value);
     }
+
+    
+
+    private void traversePreOrder(BinaryTreeNode root) {
+        if (root == null) return;
+
+        System.out.println(root.value);
+        traversePreOrder(root.left);
+        traversePreOrder(root.right);
+    }
 }
