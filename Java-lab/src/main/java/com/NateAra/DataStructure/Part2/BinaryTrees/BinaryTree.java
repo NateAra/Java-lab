@@ -97,7 +97,7 @@ public class BinaryTree {
     }
 
     public void inOrderTraversal() {
-
+        traverseInOrder(root);
     }
 
     private void traverseInOrder(BinaryTreeNode root) {
