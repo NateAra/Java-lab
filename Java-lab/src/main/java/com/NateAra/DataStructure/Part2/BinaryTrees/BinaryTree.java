@@ -106,4 +106,11 @@ public class BinaryTree {
         System.out.println(root.value);
         traverseInOrder(root.right);
     }
+    
+    public void postOrderTraversal() {
+        traversePostOrder(root);
+    }
+
+    private void traversePostOrder(BinaryTreeNode root) {
+    }
 }
