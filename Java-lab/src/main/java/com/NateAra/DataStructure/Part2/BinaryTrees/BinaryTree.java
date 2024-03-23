@@ -100,5 +100,10 @@ public class BinaryTree {
 
     }
 
-
+    private void traverseInOrder(BinaryTreeNode root) {
+        if (root == null) return;
+        traverseInOrder(root.left);
+        System.out.println(root.value);
+        traverseInOrder(root.right);
+    }
 }
