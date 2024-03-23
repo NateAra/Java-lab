@@ -95,4 +95,10 @@ public class BinaryTree {
         traversePreOrder(root.left);
         traversePreOrder(root.right);
     }
+
+    public void inOrderTraversal() {
+
+    }
+
+
 }
