@@ -84,7 +84,9 @@ public class BinaryTree {
                 : findUsingRecursive(current.right, value);
     }
 
-    
+    public void preOrderTraversal() {
+        traversePreOrder(root);
+    }
 
     private void traversePreOrder(BinaryTreeNode root) {
         if (root == null) return;
