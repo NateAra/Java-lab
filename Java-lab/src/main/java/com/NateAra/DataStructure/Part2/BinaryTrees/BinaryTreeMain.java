@@ -9,5 +9,6 @@ public class BinaryTreeMain {
         bin.insertUsingRecursive(8);
         System.out.println(bin.find(1));
         System.out.println(bin.findWithRecursive(4));
+        bin.preOrderTraversal();
     }
 }
