@@ -10,6 +10,6 @@ public class BinaryTreeMain {
         bin.insertUsingRecursive(2);
         bin.insertUsingRecursive(8);
 
-        bin.inOrderTraversal();
+        bin.postOrderTraversal();
     }
 }
