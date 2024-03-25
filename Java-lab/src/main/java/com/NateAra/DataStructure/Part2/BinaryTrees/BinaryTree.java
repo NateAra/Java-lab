@@ -112,7 +112,7 @@ public class BinaryTree {
         traversePostOrder(root);
     }
 
-    private void traversePostOrder(BinaryTreeNode root) {
+    private void traversePostOrder(NodeBinaryTree root) {
         if (root == null) return;
 
         traversePostOrder(root.left);
