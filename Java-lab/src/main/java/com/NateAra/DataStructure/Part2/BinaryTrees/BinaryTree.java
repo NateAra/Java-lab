@@ -119,4 +119,10 @@ public class BinaryTree {
         traversePostOrder(root.right);
         System.out.println(root.value);
     }
+
+    public int height() {
+        return heightRecursive(root);
+    }
+
+
 }
