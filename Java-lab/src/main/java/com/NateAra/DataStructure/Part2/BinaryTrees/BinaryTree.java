@@ -88,7 +88,7 @@ public class BinaryTree {
         traversePreOrder(root);
     }
 
-    private void traversePreOrder(BinaryTreeNode root) {
+    private void traversePreOrder(NodeBinaryTree root) {
         if (root == null) return;
 
         System.out.println(root.value);
