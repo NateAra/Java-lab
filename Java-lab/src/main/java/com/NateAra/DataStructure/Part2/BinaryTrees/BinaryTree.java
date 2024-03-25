@@ -8,7 +8,7 @@ public class BinaryTree {
     }
 
     public void insert(int value) {
-        var newNode = new BinaryTreeNode(value);
+        var newNode = new NodeBinaryTree(value);
 
         if (root == null) {
             root = newNode;
