@@ -1,7 +1,7 @@
 package com.NateAra.DataStructure.Part2.BinaryTrees;
 
 public class BinaryTree {
-    private BinaryTreeNode root;
+    private NodeBinaryTree root;
 
     public BinaryTree() {
         this.root = null;
