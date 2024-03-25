@@ -71,7 +71,7 @@ public class BinaryTree {
         return current;
     }
 
-    private boolean findUsingRecursive(BinaryTreeNode current, int value) {
+    private boolean findUsingRecursive(NodeBinaryTree current, int value) {
         if (current == null) {
             return false;
         }
