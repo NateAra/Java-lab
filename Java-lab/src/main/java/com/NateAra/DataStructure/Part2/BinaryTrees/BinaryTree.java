@@ -56,9 +56,9 @@ public class BinaryTree {
         return findUsingRecursive(root, value);
     }
 
-    private BinaryTreeNode insertRecursive(BinaryTreeNode current, int value) {
+    private NodeBinaryTree insertRecursive(NodeBinaryTree current, int value) {
         if (current == null) {
-            return new BinaryTreeNode(value);
+            return new NodeBinaryTree(value);
         }
 
         if (value < current.value) {
