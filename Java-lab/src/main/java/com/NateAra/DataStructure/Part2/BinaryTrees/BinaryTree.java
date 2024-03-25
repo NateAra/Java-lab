@@ -100,7 +100,7 @@ public class BinaryTree {
         traverseInOrder(root);
     }
 
-    private void traverseInOrder(BinaryTreeNode root) {
+    private void traverseInOrder(NodeBinaryTree root) {
         if (root == null) return;
 
         traverseInOrder(root.left);
