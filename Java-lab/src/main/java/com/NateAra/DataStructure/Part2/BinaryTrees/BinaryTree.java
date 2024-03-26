@@ -126,7 +126,7 @@ public class BinaryTree {
 
     private int heightRecursive(NodeBinaryTree root) {
         if (root == null) return -1;
-        if (root.left == null & root.right == null) return 0;
+        if (isLeaf(root)) return 0;
 
         return 1 + Math.max(heightRecursive(root.left), heightRecursive(root.right));
     }
