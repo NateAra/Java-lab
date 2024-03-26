@@ -135,4 +135,17 @@ public class BinaryTree {
         return minUsingRecursiveForBinarySearchTree(root);
     }
 
+    private int minUsingRecursiveForBinarySearchTree(NodeBinaryTree root) {
+
+        if (isLeaf(root)) {
+            return root.value;
+        }
+
+        int leftMin = root.left != null ? minUsingRecursiveForBinarySearchTree(root.left) : Integer.MAX_VALUE;
+        int rightMin = root.right != null ? minUsingRecursiveForBinarySearchTree(root.right) : Integer.MAX_VALUE;
+
+        return Math.min(root.value, Math.min(leftMin, rightMin));
+    }
+
+
 }
