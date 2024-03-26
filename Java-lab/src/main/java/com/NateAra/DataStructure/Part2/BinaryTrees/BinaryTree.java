@@ -130,4 +130,9 @@ public class BinaryTree {
 
         return 1 + Math.max(heightRecursive(root.left), heightRecursive(root.right));
     }
+
+    public int min() {
+        return minUsingRecursiveForBinarySearchTree(root);
+    }
+
 }
