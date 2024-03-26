@@ -147,5 +147,7 @@ public class BinaryTree {
         return Math.min(root.value, Math.min(leftMin, rightMin));
     }
 
-
+    private boolean isLeaf(NodeBinaryTree node) {
+        return node.left == null && node.right == null;
+    }
 }
