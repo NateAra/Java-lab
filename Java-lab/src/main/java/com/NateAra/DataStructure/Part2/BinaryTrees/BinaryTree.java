@@ -135,7 +135,7 @@ public class BinaryTree {
         return minUsingRecursiveForBinaryTree(root);
     }
 
-    private int minUsingRecursiveForBinarySearchTree(NodeBinaryTree root) {
+    private int minUsingRecursiveForBinaryTree(NodeBinaryTree root) {
 
         if (isLeaf(root)) {
             return root.value;
