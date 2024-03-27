@@ -150,4 +150,15 @@ public class BinaryTree {
     private boolean isLeaf(NodeBinaryTree node) {
         return node.left == null && node.right == null;
     }
+
+    public int minBST() {
+        if (root == null) throw new IllegalStateException();
+        var current = root;
+        var last = current;
+        while (current != null) {
+            last = current;
+            current = current.left;
+        }
+        return last.value;
+    }
 }
