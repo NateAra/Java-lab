@@ -11,5 +11,6 @@ public class MainBinaryTree {
         bin.insert(2);
         bin.insert(6);
         System.out.println(bin.min());
+        System.out.println(bin.minBST());
     }
 }
