@@ -141,8 +141,8 @@ public class BinaryTree {
             return root.value;
         }
 
-        int leftMin = root.left != null ? minUsingRecursiveForBinarySearchTree(root.left) : Integer.MAX_VALUE;
-        int rightMin = root.right != null ? minUsingRecursiveForBinarySearchTree(root.right) : Integer.MAX_VALUE;
+        int leftMin = root.left != null ? minUsingRecursiveForBinaryTree(root.left) : Integer.MAX_VALUE;
+        int rightMin = root.right != null ? minUsingRecursiveForBinaryTree(root.right) : Integer.MAX_VALUE;
 
         return Math.min(root.value, Math.min(leftMin, rightMin));
     }
