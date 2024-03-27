@@ -132,7 +132,7 @@ public class BinaryTree {
     }
 
     public int min() {
-        return minUsingRecursiveForBinarySearchTree(root);
+        return minUsingRecursiveForBinaryTree(root);
     }
 
     private int minUsingRecursiveForBinarySearchTree(NodeBinaryTree root) {
