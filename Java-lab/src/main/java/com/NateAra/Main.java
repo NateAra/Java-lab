@@ -4,29 +4,26 @@ import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
-        String word = "(){}";
-        System.out.println(isValid(word));
+        System.out.println(strStr("butsad", "sad"));
 
     }
 
-    public static boolean isValid(String s) {
-        Stack<Character> stack = new Stack<>();
+    public static int strStr(String haystack, String needle) {
+        int haystackLength = haystack.length();
+        int needleLength = needle.length();
 
-        for (char c : s.toCharArray()) {
-            if (c == '(') {
-                stack.push(')');
-            } else if (c == '{') {
-                stack.push('}');
-            } else if (c == '[') {
-                stack.push(']');
-            } else {
-                if (stack.isEmpty() || stack.pop() != c) {
-                    return false;
+        for (int i = 0; i <= needleLength; i++) {
+            int j;
+            for (j = 0; j < needleLength; j++) {
+                if (haystack.charAt(i + j) != needle.charAt(j)) {
+                    break;
                 }
             }
+            if (j == needleLength) {
+                return i;
+            }
         }
-
-        return stack.isEmpty();
+        return -1;
     }
 
 }
